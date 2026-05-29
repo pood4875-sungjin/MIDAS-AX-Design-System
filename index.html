@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <script>
+    /* FOUC 방지 — 스타일 적용 전에 data-theme 먼저 박기 */
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t !== "light" && t !== "dark") {
+          t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MIDAS AX Design System</title>
+
+  <!-- Pretendard Variable (CDN) -->
+  <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+  <!-- Poppins (로고 전용) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" />
+
+  <!-- Project CSS -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <!-- ============== Page-wide gradients (top-right + bottom-left) ============== -->
+  <div class="page-gradient page-gradient--top" aria-hidden="true">
+    <img class="page-gradient__img" src="assets/images/hero-gradient-v2.png" alt="" />
+  </div>
+  <div class="page-gradient page-gradient--bottom" aria-hidden="true">
+    <img class="page-gradient__img" src="assets/images/hero-gradient-bottom.png" alt="" />
+  </div>
+
+  <!-- ============== GNB (transparent variant) ============== -->
+  <header class="gnb gnb--transparent">
+    <div class="gnb__inner">
+      <a class="gnb__logo" href="index.html">
+        <img src="assets/images/logo-sparkle.png" alt="" width="30" height="30" />
+        <span>MIDAS AX System</span>
+      </a>
+      <nav class="gnb__nav" aria-label="Global">
+        <a href="get-started/index.html">Get a start</a>
+        <a href="foundation/index.html">Foundation</a>
+        <a href="components/index.html">Components</a>
+        <a href="pattern/index.html">Pattern</a>
+        <div class="gnb__search-wrap" data-state="closed">
+          <button class="gnb__search" type="button" aria-label="검색" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m20 20-3.5-3.5" />
+            </svg>
+          </button>
+          <div class="gnb__search-panel" role="search">
+            <input class="gnb__search-input" type="text" placeholder="검색어를 입력하세요" aria-label="검색어" autocomplete="off" spellcheck="false" />
+          </div>
+          <div class="gnb__search-results" role="listbox" aria-label="검색 결과" data-state="empty"></div>
+        </div>
+        <button class="gnb__theme" type="button" aria-label="다크 모드로 전환" aria-pressed="false">
+          <svg class="gnb__theme-icon gnb__theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2"/><path d="M12 20v2"/>
+            <path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/>
+            <path d="M2 12h2"/><path d="M20 12h2"/>
+            <path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
+          </svg>
+          <svg class="gnb__theme-icon gnb__theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============== Hero ============== -->
+    <section class="hero">
+      <div class="hero__content">
+        <h1 class="hero__title" data-reveal style="--i: 0">
+          MIDAS AX Design System<br />
+          Design Once. Scale with AX.
+        </h1>
+        <p class="hero__lead" data-reveal style="--i: 1">
+          사람과 AX가 함께 활용할 수 있도록<br />
+          패턴, 정책, 구조까지 연결된 디자인 시스템을 구축합니다.
+        </p>
+        <div class="hero__cta" data-reveal style="--i: 2">
+          <a class="btn-pill" href="#" target="_blank" rel="noopener">
+            피그마 링크 바로가기
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== Pattern (3-up cards) ============== -->
+    <section class="container section">
+      <h2 class="t-h2 section__title" data-reveal style="--i: 0">Pattern</h2>
+      <div class="card-grid">
+        <a class="p-card" data-reveal style="--i: 1" href="pattern/agentic-ui.html">
+          <div class="p-card__media">
+            <img src="assets/images/pattern-agentic.png" alt="" />
+          </div>
+          <div class="p-card__body">
+            <h3 class="p-card__title">Agentic UI</h3>
+            <p class="p-card__desc">
+              일관된 제품 경험을 위한<br />
+              재사용 가능한 UI 컴포넌트와 인터랙션 기준을 제공합니다.
+            </p>
+          </div>
+        </a>
+
+        <a class="p-card" data-reveal style="--i: 2" href="pattern/embedded-ui.html">
+          <div class="p-card__media">
+            <img src="assets/images/pattern-embedded.png" alt="" />
+          </div>
+          <div class="p-card__body">
+            <h3 class="p-card__title">Embedded UI</h3>
+            <p class="p-card__desc">
+              AX 디자인 시스템의 기반이 되는<br />
+              컬러, 타이포그래피, 토큰, 레이아웃 구조를 정의합니다.
+            </p>
+          </div>
+        </a>
+
+        <a class="p-card" data-reveal style="--i: 3" href="pattern/automation-ui.html">
+          <div class="p-card__media">
+            <img src="assets/images/pattern-automation.png" alt="" />
+          </div>
+          <div class="p-card__body">
+            <h3 class="p-card__title">Automation UI</h3>
+            <p class="p-card__desc">
+              반복되는 사용자 흐름과 운영 구조를<br />
+              AX 환경까지 고려한 패턴 형태로 제공합니다.
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============== FAQ ============== -->
+    <section class="container section">
+      <h2 class="t-h2 section__title" data-reveal style="--i: 0">FAQ</h2>
+      <div class="faq">
+        <div class="faq__item" data-reveal style="--i: 1">
+          <button class="faq__summary" type="button" aria-expanded="false">
+            <span class="faq__q">MIDAS AX 디자인 시스템은 무엇인가요?</span>
+            <span class="faq__icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0.5C8.55228 0.5 9 0.94772 9 1.5V7H14.5C15.0523 7 15.5 7.44772 15.5 8C15.5 8.55228 15.0523 9 14.5 9H9V14.5C9 15.0523 8.55228 15.5 8 15.5C7.44772 15.5 7 15.0523 7 14.5V9H1.5C0.94772 9 0.5 8.55228 0.5 8C0.5 7.44772 0.94772 7 1.5 7H7V1.5C7 0.94772 7.44772 0.5 8 0.5Z"/>
+              </svg>
+            </span>
+          </button>
+          <div class="faq__answer-wrap">
+            <div>
+              <p class="faq__answer">
+                MIDAS의 제품 전반에서 사람과 AX가 일관된 경험을 만들 수 있도록 정의한 디자인 원칙과 컴포넌트 라이브러리입니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="faq__item" data-reveal style="--i: 2">
+          <button class="faq__summary" type="button" aria-expanded="false">
+            <span class="faq__q">누구를 위한 시스템인가요?</span>
+            <span class="faq__icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0.5C8.55228 0.5 9 0.94772 9 1.5V7H14.5C15.0523 7 15.5 7.44772 15.5 8C15.5 8.55228 15.0523 9 14.5 9H9V14.5C9 15.0523 8.55228 15.5 8 15.5C7.44772 15.5 7 15.0523 7 14.5V9H1.5C0.94772 9 0.5 8.55228 0.5 8C0.5 7.44772 0.94772 7 1.5 7H7V1.5C7 0.94772 7.44772 0.5 8 0.5Z"/>
+              </svg>
+            </span>
+          </button>
+          <div class="faq__answer-wrap">
+            <div>
+              <p class="faq__answer">
+                MIDAS 제품을 만드는 모든 디자이너, 엔지니어, 기획자, 그리고 AX 시스템을 활용하는 외부 파트너를 위한 공통 자산입니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="faq__item" data-reveal style="--i: 3">
+          <button class="faq__summary" type="button" aria-expanded="false">
+            <span class="faq__q">어떤 프로젝트에서 사용해야 하나요?</span>
+            <span class="faq__icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0.5C8.55228 0.5 9 0.94772 9 1.5V7H14.5C15.0523 7 15.5 7.44772 15.5 8C15.5 8.55228 15.0523 9 14.5 9H9V14.5C9 15.0523 8.55228 15.5 8 15.5C7.44772 15.5 7 15.0523 7 14.5V9H1.5C0.94772 9 0.5 8.55228 0.5 8C0.5 7.44772 0.94772 7 1.5 7H7V1.5C7 0.94772 7.44772 0.5 8 0.5Z"/>
+              </svg>
+            </span>
+          </button>
+          <div class="faq__answer-wrap">
+            <div>
+              <p class="faq__answer">
+                MIDAS 브랜드와 연결된 모든 디지털 제품에서 사용하는 것을 권장합니다. 별도 디자인이 필요한 경우에도 본 시스템의 토큰과 원칙을 기반으로 확장합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="faq__item" data-reveal style="--i: 4">
+          <button class="faq__summary" type="button" aria-expanded="false">
+            <span class="faq__q">Foundation / Variables는 어떻게 구성되어 있나요?</span>
+            <span class="faq__icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0.5C8.55228 0.5 9 0.94772 9 1.5V7H14.5C15.0523 7 15.5 7.44772 15.5 8C15.5 8.55228 15.0523 9 14.5 9H9V14.5C9 15.0523 8.55228 15.5 8 15.5C7.44772 15.5 7 15.0523 7 14.5V9H1.5C0.94772 9 0.5 8.55228 0.5 8C0.5 7.44772 0.94772 7 1.5 7H7V1.5C7 0.94772 7.44772 0.5 8 0.5Z"/>
+              </svg>
+            </span>
+          </button>
+          <div class="faq__answer-wrap">
+            <div>
+              <p class="faq__answer">
+                컬러, 타이포그래피, 스페이싱, 레디우스 등 기본 시각 토큰을 시맨틱 단위로 정의하고, 컴포넌트는 이 토큰을 참조하여 일관성을 유지합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="faq__item" data-reveal style="--i: 5">
+          <button class="faq__summary" type="button" aria-expanded="false">
+            <span class="faq__q">디자인 시스템을 Clone해서 사용할 수 있나요?</span>
+            <span class="faq__icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0.5C8.55228 0.5 9 0.94772 9 1.5V7H14.5C15.0523 7 15.5 7.44772 15.5 8C15.5 8.55228 15.0523 9 14.5 9H9V14.5C9 15.0523 8.55228 15.5 8 15.5C7.44772 15.5 7 15.0523 7 14.5V9H1.5C0.94772 9 0.5 8.55228 0.5 8C0.5 7.44772 0.94772 7 1.5 7H7V1.5C7 0.94772 7.44772 0.5 8 0.5Z"/>
+              </svg>
+            </span>
+          </button>
+          <div class="faq__answer-wrap">
+            <div>
+              <p class="faq__answer">
+                내부 프로젝트는 자유롭게 복제하여 사용할 수 있습니다. 외부 활용은 별도 협의가 필요합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="faq__item" data-reveal style="--i: 6">
+          <button class="faq__summary" type="button" aria-expanded="false">
+            <span class="faq__q">운영 및 유지관리는 누가 담당하나요?</span>
+            <span class="faq__icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0.5C8.55228 0.5 9 0.94772 9 1.5V7H14.5C15.0523 7 15.5 7.44772 15.5 8C15.5 8.55228 15.0523 9 14.5 9H9V14.5C9 15.0523 8.55228 15.5 8 15.5C7.44772 15.5 7 15.0523 7 14.5V9H1.5C0.94772 9 0.5 8.55228 0.5 8C0.5 7.44772 0.94772 7 1.5 7H7V1.5C7 0.94772 7.44772 0.5 8 0.5Z"/>
+              </svg>
+            </span>
+          </button>
+          <div class="faq__answer-wrap">
+            <div>
+              <p class="faq__answer">
+                MIDAS Design System 팀이 운영을 담당하며, 각 제품팀의 기여를 통해 함께 발전시킵니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== Footer ============== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>© 2026 MIDAS, Inc.</span>
+      <span class="footer__badge">버전 1.0</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/flexsearch@0.7.43/dist/flexsearch.bundle.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/theme.js" defer></script>
+  <script src="js/search.js" defer></script>
+</body>
+</html>

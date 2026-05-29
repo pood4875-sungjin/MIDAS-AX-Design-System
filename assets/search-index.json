@@ -1,0 +1,1689 @@
+{
+  "generatedAt": "2026-05-29T01:35:36.990Z",
+  "count": 187,
+  "docs": [
+    {
+      "id": 0,
+      "url": "components/avatar.html",
+      "group": "Components",
+      "page": "Avatar",
+      "title": "Avatar",
+      "section": "",
+      "text": "발화 주체를 시각적으로 표시하는 작은 원형 컴포넌트입니다. 사용자(이니셜·프로필 사진)와 AI(시스템 로고·gradient)를 즉시 구분하고, System(공지·자동화)는 별도 회색 톤으로 표현합니다. 채팅 인터페이스의 시각적 리듬을 만들고 위계를 명확히 합니다. 홍 A B +3"
+    },
+    {
+      "id": 1,
+      "url": "components/avatar.html#anatomy",
+      "group": "Components",
+      "page": "Avatar",
+      "title": "Anatomy",
+      "section": "Anatomy",
+      "text": "Circle container + Image / Initials / Icon 슬롯. Status dot 으로 온라인·자리비움 상태를 표현할 수 있으며, 그룹 사용 시 -10px overlap 으로 stack 표현. 1. Container (circle) 2. Image 3. Initials fallback 4. AI icon 5. Status dot 6. Size SM / MD / LG 7. Group stack 8. Bord"
+    },
+    {
+      "id": 2,
+      "url": "components/avatar.html#usage",
+      "group": "Components",
+      "page": "Avatar",
+      "title": "Usage",
+      "section": "Usage",
+      "text": ""
+    },
+    {
+      "id": 3,
+      "url": "components/avatar.html#usage",
+      "group": "Components",
+      "page": "Avatar",
+      "title": "Subject Types",
+      "section": "Subject Types",
+      "text": "홍 User AI System User 는 gradient + 이니셜 또는 프로필 사진. AI 는 시스템 로고 또는 단색 + icon. System 은 grey fill + 시스템 글리프. 세 타입이 한 화면에서 서로 구분되도록 컬러·아이콘을 분리."
+    },
+    {
+      "id": 4,
+      "url": "components/avatar.html#usage",
+      "group": "Components",
+      "page": "Avatar",
+      "title": "Stack & Repetition",
+      "section": "Stack & Repetition",
+      "text": "A B C +5 연속된 같은 발화자의 메시지에는 첫 메시지에만 avatar 를 표시하고 이후는 생략합니다. 다중 사용자 표시는 stack 으로 overlap 처리하여 공간을 절약합니다."
+    },
+    {
+      "id": 5,
+      "url": "components/avatar.html#how-to-use",
+      "group": "Components",
+      "page": "Avatar",
+      "title": "How to use",
+      "section": "How to use",
+      "text": "첫 메시지 두 번째 메시지 — avatar 생략 Do 발화 직전 메시지 옆에만 avatar 를 표시합니다. 연속된 같은 발화자에게는 반복하지 않습니다. 메시지 1 메시지 2 — avatar 반복 Don't 모든 메시지마다 avatar 를 반복 표시하지 않습니다. 시각 노이즈와 공간 낭비입니다."
+    },
+    {
+      "id": 6,
+      "url": "components/button.html",
+      "group": "Components",
+      "page": "Button",
+      "title": "Button",
+      "section": "",
+      "text": "사용자 액션의 기본 단위입니다. Primary / Secondary / Ghost 세 가지 변형으로 화면 안의 액션 위계를 명확히 합니다. AX 인터페이스에서는 '전송', '재생성', '중지', '취소' 같은 핵심 액션에 사용하고, 화면당 Primary 는 하나만 두어 사용자의 다음 행동을 명확히 안내합니다. Save changes Cancel Learn more"
+    },
+    {
+      "id": 7,
+      "url": "components/button.html#anatomy",
+      "group": "Components",
+      "page": "Button",
+      "title": "Anatomy",
+      "section": "Anatomy",
+      "text": "라벨이 필수이며 leading / trailing 아이콘을 선택적으로 추가할 수 있습니다. 패딩 14/22, radius 12 가 기본이며 변형에 따라 fill 과 border 가 달라집니다. Add item 1. Label 2. Leading icon 3. Trailing icon 4. Padding 5. Radius 6. Background fill 7. Border 8. Default state 9. Hover state"
+    },
+    {
+      "id": 8,
+      "url": "components/button.html#usage",
+      "group": "Components",
+      "page": "Button",
+      "title": "Usage",
+      "section": "Usage",
+      "text": ""
+    },
+    {
+      "id": 9,
+      "url": "components/button.html#usage",
+      "group": "Components",
+      "page": "Button",
+      "title": "Priority Variants",
+      "section": "Priority Variants",
+      "text": "Primary Secondary Ghost Primary 는 화면당 1개, 가장 중요한 액션에만 사용. Secondary 는 보조 액션, Ghost 는 부차적·인라인 액션. 우선순위가 시각 위계에 그대로 반영됩니다."
+    },
+    {
+      "id": 10,
+      "url": "components/button.html#usage",
+      "group": "Components",
+      "page": "Button",
+      "title": "Sizes",
+      "section": "Sizes",
+      "text": "Small Medium Large SM / MD / LG 세 사이즈를 컨텍스트에 맞게 사용합니다. 같은 화면 안에서는 한 사이즈로 통일하여 시각 위계를 일정하게 유지합니다."
+    },
+    {
+      "id": 11,
+      "url": "components/button.html#how-to-use",
+      "group": "Components",
+      "page": "Button",
+      "title": "How to use",
+      "section": "How to use",
+      "text": "Cancel Save Do 우선순위에 맞게 Primary / Secondary / Ghost 를 사용합니다. Save Submit Confirm Don't 한 화면에 Primary 버튼을 2개 이상 두지 않습니다. 사용자의 액션이 분산됩니다."
+    },
+    {
+      "id": 12,
+      "url": "components/card.html",
+      "group": "Components",
+      "page": "Card",
+      "title": "Card",
+      "section": "",
+      "text": "콘텐츠를 그룹화하는 기본 컨테이너입니다. 미디어 + 본문 영역 구조로 Grid, Carousel 등 다양한 레이아웃에서 재사용됩니다. AI 응답 안의 추천 카드, 사이드 패널의 인사이트 카드, 대시보드의 통계 카드 등 다양한 컨텍스트에 적용됩니다. Insight Summary 최근 7일 간 사용자 활동 패턴 분석 결과 — 전환율 12% 증가"
+    },
+    {
+      "id": 13,
+      "url": "components/card.html#anatomy",
+      "group": "Components",
+      "page": "Card",
+      "title": "Anatomy",
+      "section": "Anatomy",
+      "text": "썸네일 상단/좌측 + 본문(heading + caption) + 선택적 footer(액션·메타) 구조. radius 24 / 1px subtle border / surface-elevated bg 가 기본입니다. Heading Caption text describing the content 1. Thumbnail 2. Overlay caption 3. Heading 4. Caption 5. Footer 6. Action but"
+    },
+    {
+      "id": 14,
+      "url": "components/card.html#usage",
+      "group": "Components",
+      "page": "Card",
+      "title": "Usage",
+      "section": "Usage",
+      "text": ""
+    },
+    {
+      "id": 15,
+      "url": "components/card.html#usage",
+      "group": "Components",
+      "page": "Card",
+      "title": "Variants",
+      "section": "Variants",
+      "text": "Default Elevated Default 는 일반 카드. Elevated 는 그림자로 강조. Outlined 는 보더만, bg 없음. 같은 화면에서 한 변형으로 통일합니다."
+    },
+    {
+      "id": 16,
+      "url": "components/card.html#usage",
+      "group": "Components",
+      "page": "Card",
+      "title": "Text Ellipsis",
+      "section": "Text Ellipsis",
+      "text": "긴 제목은 최대 두 줄까지 표시되고 나머지는 말줄임 처리됩니다. 한 줄 캡션은 한 줄 너비에서 잘립니다. Heading 최대 2줄, Caption 최대 1줄. 초과 시 말줄임(...)으로 카드 높이를 균일하게 유지합니다."
+    },
+    {
+      "id": 17,
+      "url": "components/card.html#how-to-use",
+      "group": "Components",
+      "page": "Card",
+      "title": "How to use",
+      "section": "How to use",
+      "text": "A B C Do 카드를 Grid / Carousel 형태로 배열하여 화면을 효율적으로 활용합니다. Caption 이 Heading 처럼 강조됨 Heading 이 약하게 Don't Heading 과 Caption 의 위계를 임의로 바꾸지 않습니다. 정보 위계가 흐려집니다."
+    },
+    {
+      "id": 18,
+      "url": "components/code-block.html",
+      "group": "Components",
+      "page": "Code Block",
+      "title": "Code Block",
+      "section": "",
+      "text": "AI 응답의 코드를 표시하는 monospace 블록입니다. 언어 감지 · syntax highlighting · 복사 액션을 포함하며 짧은 inline code 와 긴 multi-line code 두 형태를 구분합니다. 긴 줄은 가로 스크롤, 한 번의 클릭으로 전체 복사를 지원해 사용자가 결과를 즉시 활용할 수 있게 합니다. typescript // AX 토큰 시스템 const tokens = { 'label-strong' :"
+    },
+    {
+      "id": 19,
+      "url": "components/code-block.html#anatomy",
+      "group": "Components",
+      "page": "Code Block",
+      "title": "Anatomy",
+      "section": "Anatomy",
+      "text": "Head (언어 라벨 + 복사 버튼) + Body (코드) 두 영역. Body 는 monospace 폰트, 어두운 배경, syntax highlight 가 기본입니다. 다크 모드 어디서나 항상 같은 다크 톤을 유지하여 코드의 가독성을 보장합니다. tsx function Button () { return < button >Click</ button >; } 1. Container 2. Language tag 3. Copy but"
+    },
+    {
+      "id": 20,
+      "url": "components/code-block.html#usage",
+      "group": "Components",
+      "page": "Code Block",
+      "title": "Usage",
+      "section": "Usage",
+      "text": ""
+    },
+    {
+      "id": 21,
+      "url": "components/code-block.html#usage",
+      "group": "Components",
+      "page": "Code Block",
+      "title": "Inline vs Block",
+      "section": "Inline vs Block",
+      "text": "변수 labelStrong 은 강조 텍스트 컬러를 의미합니다. inline code — 본문 내부 Inline code 는 본문 안에 짧은 변수명·함수명 표기용으로 작은 monospace fill 만. Block code 는 여러 줄 예시 코드용으로 head + syntax highlight + copy 풀스펙."
+    },
+    {
+      "id": 22,
+      "url": "components/code-block.html#usage",
+      "group": "Components",
+      "page": "Code Block",
+      "title": "Long Lines",
+      "section": "Long Lines",
+      "text": "javascript const veryLongVariableNameThatScrolls = \"긴 줄은 가로 스크롤로 처리\" ; 한 줄이 컨테이너 너비를 초과하면 가로 스크롤(overflow-x: auto)로 처리. wrap 처리는 코드의 들여쓰기·줄바꿈 의미를 왜곡할 수 있어 권장하지 않습니다."
+    },
+    {
+      "id": 23,
+      "url": "components/code-block.html#how-to-use",
+      "group": "Components",
+      "page": "Code Block",
+      "title": "How to use",
+      "section": "How to use",
+      "text": "copy copy ( 'done!' ) Do 한 번 클릭으로 코드 블록 전체를 복사할 수 있는 버튼을 제공합니다. x Don't 짧은 inline code 를 block 으로 표시하지 않습니다. 위계가 흐려집니다."
+    },
+    {
+      "id": 24,
+      "url": "components/icon-button.html",
+      "group": "Components",
+      "page": "Icon Button",
+      "title": "Icon Button",
+      "section": "",
+      "text": "라벨 없이 아이콘만으로 액션을 표현하는 컴팩트 버튼입니다. AI 응답 위 인라인 액션(복사·재생성·좋아요·싫어요), 툴바 액션, 모달 닫기 등에 사용합니다. 단독 사용 시 반드시 aria-label 로 의미를 전달합니다."
+    },
+    {
+      "id": 25,
+      "url": "components/icon-button.html#anatomy",
+      "group": "Components",
+      "page": "Icon Button",
+      "title": "Anatomy",
+      "section": "Anatomy",
+      "text": "정사각 컨테이너 + 18px 아이콘 + 8/10/12 radius 가 기본 anatomy 입니다. Variants 는 Filled / Tinted / Ghost 셋으로, 컨텍스트에 맞춰 강조 정도를 조절합니다. 1. Container 2. Icon (18-20px) 3. Background 4. Border 5. Hover bg 6. Pressed bg 7. Disabled 8. Tooltip (선택) 9. Size SM / "
+    },
+    {
+      "id": 26,
+      "url": "components/icon-button.html#usage",
+      "group": "Components",
+      "page": "Icon Button",
+      "title": "Usage",
+      "section": "Usage",
+      "text": ""
+    },
+    {
+      "id": 27,
+      "url": "components/icon-button.html#usage",
+      "group": "Components",
+      "page": "Icon Button",
+      "title": "Variants",
+      "section": "Variants",
+      "text": "Filled 는 강한 강조, Tinted (fill-normal bg) 는 중간, Ghost 는 약한 강조. 같은 툴바 안에서는 한 가지 변형으로 통일합니다."
+    },
+    {
+      "id": 28,
+      "url": "components/icon-button.html#usage",
+      "group": "Components",
+      "page": "Icon Button",
+      "title": "Touch Target",
+      "section": "Touch Target",
+      "text": "최소 터치 영역 44×44 px 를 보장합니다. 아이콘이 24px 더라도 컨테이너는 40px 이상으로 유지하여 모바일·태블릿 환경의 사용성을 확보합니다."
+    },
+    {
+      "id": 29,
+      "url": "components/icon-button.html#how-to-use",
+      "group": "Components",
+      "page": "Icon Button",
+      "title": "How to use",
+      "section": "How to use",
+      "text": "aria-label=\"Copy to clipboard\" Do 단독 아이콘 버튼에는 반드시 aria-label 또는 tooltip 으로 의미를 전달합니다. aria-label 누락 — 의미 전달 X Don't 라벨 없는 아이콘 버튼에 aria-label 을 빠뜨리지 않습니다. 스크린리더에서 '버튼' 이라고만 읽힙니다."
+    },
+    {
+      "id": 30,
+      "url": "components/index.html",
+      "group": "Components",
+      "page": "Components",
+      "title": "Components",
+      "section": "",
+      "text": "AI 챗 기반 AX 인터페이스를 짓는 재사용 가능한 UI 블록입니다. Actions / Inputs / Chat / Surface / Feedback 다섯 그룹으로 분류되며, 각 컴포넌트는 Foundation 토큰을 참조하여 일관된 인터랙션·시각 언어를 유지합니다."
+    },
+    {
+      "id": 31,
+      "url": "components/index.html#actions",
+      "group": "Components",
+      "page": "Components",
+      "title": "Actions",
+      "section": "Actions",
+      "text": "Primary Ghost 자세히 보기"
+    },
+    {
+      "id": 32,
+      "url": "components/index.html#actions",
+      "group": "Components",
+      "page": "Components",
+      "title": "Button",
+      "section": "Button",
+      "text": "Primary / Secondary / Ghost — 사용자 액션의 기본 단위. 자세히 보기"
+    },
+    {
+      "id": 33,
+      "url": "components/index.html#actions",
+      "group": "Components",
+      "page": "Components",
+      "title": "Icon Button",
+      "section": "Icon Button",
+      "text": "라벨 없이 아이콘만으로 — 복사·재생성·툴바 액션. Summarize Translate 자세히 보기"
+    },
+    {
+      "id": 34,
+      "url": "components/index.html#actions",
+      "group": "Components",
+      "page": "Components",
+      "title": "Suggestion Chip",
+      "section": "Suggestion Chip",
+      "text": "AI 가 제안하는 다음 액션 — pill 형태 즉시 실행."
+    },
+    {
+      "id": 35,
+      "url": "components/index.html#inputs",
+      "group": "Components",
+      "page": "Components",
+      "title": "Inputs",
+      "section": "Inputs",
+      "text": "Ask anything... 자세히 보기"
+    },
+    {
+      "id": 36,
+      "url": "components/index.html#inputs",
+      "group": "Components",
+      "page": "Components",
+      "title": "Text Composer",
+      "section": "Text Composer",
+      "text": "AI 프롬프트 입력의 핵심 — 첨부 · 음성 · 전송 · 중지. Email name@co.com 자세히 보기"
+    },
+    {
+      "id": 37,
+      "url": "components/index.html#inputs",
+      "group": "Components",
+      "page": "Components",
+      "title": "Text Field",
+      "section": "Text Field",
+      "text": "폼·설정 화면용 — label · helper · error 4-state."
+    },
+    {
+      "id": 38,
+      "url": "components/index.html#chat",
+      "group": "Components",
+      "page": "Components",
+      "title": "Chat",
+      "section": "Chat",
+      "text": "User AI 자세히 보기"
+    },
+    {
+      "id": 39,
+      "url": "components/index.html#chat",
+      "group": "Components",
+      "page": "Components",
+      "title": "Message Bubble",
+      "section": "Message Bubble",
+      "text": "사용자·AI 발화 구분 컨테이너 — 정렬·radius·streaming. A 자세히 보기"
+    },
+    {
+      "id": 40,
+      "url": "components/index.html#chat",
+      "group": "Components",
+      "page": "Components",
+      "title": "Avatar",
+      "section": "Avatar",
+      "text": "발화 주체 표시 — User / AI / System. 자세히 보기"
+    },
+    {
+      "id": 41,
+      "url": "components/index.html#chat",
+      "group": "Components",
+      "page": "Components",
+      "title": "Streaming Indicator",
+      "section": "Streaming Indicator",
+      "text": "AI 생성 중 모션 — typing dots / cursor / pulse. ts const a = 'b' 자세히 보기"
+    },
+    {
+      "id": 42,
+      "url": "components/index.html#chat",
+      "group": "Components",
+      "page": "Components",
+      "title": "Code Block",
+      "section": "Code Block",
+      "text": "AI 응답의 코드 표시 — syntax highlight + copy."
+    },
+    {
+      "id": 43,
+      "url": "components/index.html#surface",
+      "group": "Components",
+      "page": "Components",
+      "title": "Surface",
+      "section": "Surface",
+      "text": "Card Container 자세히 보기"
+    },
+    {
+      "id": 44,
+      "url": "components/index.html#surface",
+      "group": "Components",
+      "page": "Components",
+      "title": "Card",
+      "section": "Card",
+      "text": "콘텐츠를 그룹화하는 기본 컨테이너. Dialog 자세히 보기"
+    },
+    {
+      "id": 45,
+      "url": "components/index.html#surface",
+      "group": "Components",
+      "page": "Components",
+      "title": "Modal",
+      "section": "Modal",
+      "text": "중요 정보·결정 요구 — backdrop + ESC + focus trap."
+    },
+    {
+      "id": 46,
+      "url": "components/index.html#feedback",
+      "group": "Components",
+      "page": "Components",
+      "title": "Feedback",
+      "section": "Feedback",
+      "text": "Streaming Done 자세히 보기"
+    },
+    {
+      "id": 47,
+      "url": "components/index.html#feedback",
+      "group": "Components",
+      "page": "Components",
+      "title": "Status Badge",
+      "section": "Status Badge",
+      "text": "AI 상태 표시 — Streaming / Pending / Success / Error."
+    },
+    {
+      "id": 48,
+      "url": "components/message-bubble.html",
+      "group": "Components",
+      "page": "Message Bubble",
+      "title": "Message Bubble",
+      "section": "",
+      "text": "사용자와 AI 의 발화를 시각적으로 구분하는 채팅 메시지 컨테이너입니다. 발화 주체에 따라 정렬·배경·radius 가 달라지며 markdown 응답, 코드 블록, 인용, streaming 등 다양한 컨텐츠를 포함합니다. tail radius(4px)로 발화 주체의 위치를 시각적으로 가리킵니다. 디자인 토큰 사용 방법을 알려줘 시맨틱 토큰은 의미 기반으로 정의되어 컴포넌트가 모드 전환에 자동 적응합니다. 예를 들어... 예시도 "
+    },
+    {
+      "id": 49,
+      "url": "components/message-bubble.html#anatomy",
+      "group": "Components",
+      "page": "Message Bubble",
+      "title": "Anatomy",
+      "section": "Anatomy",
+      "text": "Container + Sender alignment + Background + Tail radius. 사용자 메시지는 오른쪽 정렬·dark fill, AI 메시지는 왼쪽 정렬·light fill 로 즉시 구분됩니다. AI 응답이 여기에 표시됩니다. 충분히 긴 텍스트도 자연스럽게 줄바꿈됩니다. 1. Container 2. Sender alignment 3. Background 4. Tail radius (4) 5. Text co"
+    },
+    {
+      "id": 50,
+      "url": "components/message-bubble.html#usage",
+      "group": "Components",
+      "page": "Message Bubble",
+      "title": "Usage",
+      "section": "Usage",
+      "text": ""
+    },
+    {
+      "id": 51,
+      "url": "components/message-bubble.html#usage",
+      "group": "Components",
+      "page": "Message Bubble",
+      "title": "Sender Differentiation",
+      "section": "Sender Differentiation",
+      "text": "사용자 메시지 AI 응답 메시지 User 는 오른쪽 / inverse-background / 우하단 tail radius 4. AI 는 왼쪽 / fill-normal / 좌하단 tail radius 4. 정렬·컬러·tail 셋이 함께 발화 주체를 명확히 합니다."
+    },
+    {
+      "id": 52,
+      "url": "components/message-bubble.html#usage",
+      "group": "Components",
+      "page": "Message Bubble",
+      "title": "Long-form Content",
+      "section": "Long-form Content",
+      "text": "긴 응답은 max-width 로 70 글자 안에 유지되어 가독성을 확보합니다. markdown · code block · 인용 모두 같은 bubble 안에 자연스럽게 표시됩니다. AI 응답이 길어지면 max-width 를 70 글자 이내로 유지하여 가독성을 확보합니다. markdown rendering 시 heading · list · code block · quote 모두 같은 bubble 안에 자연스럽게 표시."
+    },
+    {
+      "id": 53,
+      "url": "components/message-bubble.html#how-to-use",
+      "group": "Components",
+      "page": "Message Bubble",
+      "title": "How to use",
+      "section": "How to use",
+      "text": "질문 응답 Do 발화 주체별 정렬·컬러·tail radius 의 일관성을 유지합니다. 중앙 정렬 — 발화 주체 불명확 tail radius 일관성 없음 Don't 사용자와 AI 메시지의 시각 위계를 비슷하게 만들지 않습니다. 발화 주체 구분이 흐려집니다."
+    },
+    {
+      "id": 54,
+      "url": "components/modal.html",
+      "group": "Components",
+      "page": "Modal",
+      "title": "Modal",
+      "section": "",
+      "text": "중요 정보 표시 또는 사용자 결정을 요구하는 오버레이 컨테이너입니다. 배경을 dim 처리하여 본문과 분리하고, ESC · 배경 클릭 · 닫기 버튼 세 가지 경로로 닫을 수 있습니다. 포커스를 모달 내부에 가두는 focus-trap 으로 키보드 접근성을 보장합니다. 변경사항을 저장할까요? 저장하지 않고 닫으면 작성한 내용이 사라집니다. 취소 저장"
+    },
+    {
+      "id": 55,
+      "url": "components/modal.html#anatomy",
+      "group": "Components",
+      "page": "Modal",
+      "title": "Anatomy",
+      "section": "Anatomy",
+      "text": "Backdrop + Container 구조. 헤더(제목+닫기), 본문, 푸터(액션) 세 영역으로 구성. 등장 시 fade-in + scale 0.96→1, 퇴장 역순. Header Body content Cancel OK 1. Backdrop (dim) 2. Container 3. Header 4. Body 5. Footer 6. Close button 7. ESC key 8. Focus trap 9. Width SM/MD/L"
+    },
+    {
+      "id": 56,
+      "url": "components/modal.html#usage",
+      "group": "Components",
+      "page": "Modal",
+      "title": "Usage",
+      "section": "Usage",
+      "text": ""
+    },
+    {
+      "id": 57,
+      "url": "components/modal.html#usage",
+      "group": "Components",
+      "page": "Modal",
+      "title": "Sizing",
+      "section": "Sizing",
+      "text": "SM MD LG Small (400px) 확인 다이얼로그, Medium (600px) 폼, Large (900px) 콘텐츠 미리보기. 모바일에선 항상 full-width fallback."
+    },
+    {
+      "id": 58,
+      "url": "components/modal.html#usage",
+      "group": "Components",
+      "page": "Modal",
+      "title": "Dismiss",
+      "section": "Dismiss",
+      "text": "ESC · 클릭 · 닫기 세 경로 모두 지원 ESC · 배경 클릭 · 닫기 버튼 세 경로 모두 지원. 데이터 손실 위험이 있는 모달은 confirm 으로 한 번 더 확인."
+    },
+    {
+      "id": 59,
+      "url": "components/modal.html#how-to-use",
+      "group": "Components",
+      "page": "Modal",
+      "title": "How to use",
+      "section": "How to use",
+      "text": "계정 삭제 되돌릴 수 없습니다. Do 사용자의 즉각 결정이 필요한 핵심 액션에만 모달을 사용합니다. 중첩 모달 1 중첩 모달 2 Don't 모달 위에 모달을 중첩하지 않습니다. 컨텍스트 혼란과 z-index 충돌이 발생합니다."
+    },
+    {
+      "id": 60,
+      "url": "components/status-badge.html",
+      "group": "Components",
+      "page": "Status Badge",
+      "title": "Status Badge",
+      "section": "",
+      "text": "AI 작업 상태(생성 중·완료·오류·대기)를 짧고 명확하게 표시합니다. 패널 헤더·메시지 인라인·리스트 아이템 등에서 시스템 상태를 한 눈에 파악할 수 있게 하며, 색·아이콘·텍스트 세 시그널을 함께 사용해 색맹 사용자도 정보를 잃지 않도록 합니다. Generating Completed Failed Pending"
+    },
+    {
+      "id": 61,
+      "url": "components/status-badge.html#anatomy",
+      "group": "Components",
+      "page": "Status Badge",
+      "title": "Anatomy",
+      "section": "Anatomy",
+      "text": "Dot/Icon + Label + Pill container. 컬러는 카테고리에 맞춰(streaming=blue, success=green, error=red, pending=yellow), Streaming 상태일 때만 dot pulse 애니메이션이 동작합니다. Streaming 1. Dot / Icon 2. Label 3. Pill radius 4. Soft variant 5. Solid variant 6. Streamin"
+    },
+    {
+      "id": 62,
+      "url": "components/status-badge.html#usage",
+      "group": "Components",
+      "page": "Status Badge",
+      "title": "Usage",
+      "section": "Usage",
+      "text": ""
+    },
+    {
+      "id": 63,
+      "url": "components/status-badge.html#usage",
+      "group": "Components",
+      "page": "Status Badge",
+      "title": "Status States",
+      "section": "Status States",
+      "text": "Streaming Pending Success Error Streaming (생성 중) · Pending (대기) · Success (완료) · Error (실패). 각 상태는 컬러 + dot 형태로 분리되어 한 화면 안에서 즉시 구분됩니다."
+    },
+    {
+      "id": 64,
+      "url": "components/status-badge.html#usage",
+      "group": "Components",
+      "page": "Status Badge",
+      "title": "Pulse",
+      "section": "Pulse",
+      "text": "Streaming pulse animation (1.4s) Streaming 상태에서만 dot 이 1.4초 주기로 pulse 애니메이션. 완료·오류·대기 상태에서는 정적 dot 으로 시각 노이즈를 줄입니다."
+    },
+    {
+      "id": 65,
+      "url": "components/status-badge.html#how-to-use",
+      "group": "Components",
+      "page": "Status Badge",
+      "title": "How to use",
+      "section": "How to use",
+      "text": "Failed Do 색 + 아이콘/텍스트를 함께 사용하여 색맹 사용자에게도 정보를 보장합니다. Don't 색만으로 의미를 전달하지 않습니다. 색맹·저시력 사용자가 정보를 잃습니다."
+    },
+    {
+      "id": 66,
+      "url": "components/streaming-indicator.html",
+      "group": "Components",
+      "page": "Streaming Indicator",
+      "title": "Streaming Indicator",
+      "section": "",
+      "text": "AI 응답 생성 중임을 표현하는 모션 인디케이터입니다. 점멸하는 점 3개(typing dots), 점진적으로 채워지는 텍스트(streaming cursor), 또는 spinner 형태로 사용합니다. 사용자에게 시스템이 작동 중임을 알려 응답을 기다리는 인내심을 만듭니다. AI thinking — typing dots"
+    },
+    {
+      "id": 67,
+      "url": "components/streaming-indicator.html#anatomy",
+      "group": "Components",
+      "page": "Streaming Indicator",
+      "title": "Anatomy",
+      "section": "Anatomy",
+      "text": "여러 dot 의 stagger 애니메이션 또는 깜빡이는 cursor 가 기본 형태. duration, easing, stagger 시점을 모션 토큰에 맞춰 사용합니다. 응답이 도착하면 즉시 제거되어 사용자 경험이 끊기지 않도록 합니다. 1. Dot / Cursor 2. Animation 3. Color (label-strong) 4. Position 5. Stagger 150ms 6. Duration 1.2s 7. Easing"
+    },
+    {
+      "id": 68,
+      "url": "components/streaming-indicator.html#usage",
+      "group": "Components",
+      "page": "Streaming Indicator",
+      "title": "Usage",
+      "section": "Usage",
+      "text": ""
+    },
+    {
+      "id": 69,
+      "url": "components/streaming-indicator.html#usage",
+      "group": "Components",
+      "page": "Streaming Indicator",
+      "title": "Variants",
+      "section": "Variants",
+      "text": "Dots 생각 중 Cursor Typing dots 는 메시지 도착 전(사고 중), Streaming cursor 는 응답 도착 중(타이핑), Pulse 는 백그라운드 작업. 컨텍스트에 맞는 한 가지 형태를 일관되게 사용합니다."
+    },
+    {
+      "id": 70,
+      "url": "components/streaming-indicator.html#usage",
+      "group": "Components",
+      "page": "Streaming Indicator",
+      "title": "Placement",
+      "section": "Placement",
+      "text": "Message bubble 내부에 inline 으로 둘 수도, standalone 으로 패널 위에 띄울 수도 있습니다. 응답 도착이 시작되면 즉시 제거하여 사용자 경험이 끊기지 않도록 합니다."
+    },
+    {
+      "id": 71,
+      "url": "components/streaming-indicator.html#how-to-use",
+      "group": "Components",
+      "page": "Streaming Indicator",
+      "title": "How to use",
+      "section": "How to use",
+      "text": "AI 응답이 도착하기 시작했습니다 Do 응답 도착이 시작되면 streaming indicator 를 즉시 제거합니다. 너무 짧은 응답에도 indicator Don't 너무 빠른 응답("
+    },
+    {
+      "id": 72,
+      "url": "components/suggestion-chip.html",
+      "group": "Components",
+      "page": "Suggestion Chip",
+      "title": "Suggestion Chip",
+      "section": "",
+      "text": "AI 가 제안하는 다음 액션을 표현하는 pill 형태 컴포넌트입니다. '이걸 시도해보세요' 같은 후속 질문, 빠른 답변 옵션, 추천 prompt 에 사용합니다. 클릭 즉시 액션이 실행되어 사용자의 발화 부담을 줄입니다. Summarize Translate to English Explain code Make it shorter Suggest examples"
+    },
+    {
+      "id": 73,
+      "url": "components/suggestion-chip.html#anatomy",
+      "group": "Components",
+      "page": "Suggestion Chip",
+      "title": "Anatomy",
+      "section": "Anatomy",
+      "text": "Label + (선택)Leading icon + pill radius 가 기본 구조입니다. Filled 와 Outline 두 변형이 있으며 Group 안에서 한 가지로 통일합니다. Add more context 1. Label 2. Leading icon 3. Pill radius (99) 4. Padding (10/16) 5. Background 6. Border 7. Hover state 8. Selected state 9"
+    },
+    {
+      "id": 74,
+      "url": "components/suggestion-chip.html#usage",
+      "group": "Components",
+      "page": "Suggestion Chip",
+      "title": "Usage",
+      "section": "Usage",
+      "text": ""
+    },
+    {
+      "id": 75,
+      "url": "components/suggestion-chip.html#usage",
+      "group": "Components",
+      "page": "Suggestion Chip",
+      "title": "Variants",
+      "section": "Variants",
+      "text": "Outline Outline Filled Filled Outline 추천 · Filled 선택됨 Outline 은 추천·선택지, Filled 는 활성 필터·선택됨 상태. 같은 그룹 안에서는 한 가지 변형으로 통일하여 시각 노이즈를 줄입니다."
+    },
+    {
+      "id": 76,
+      "url": "components/suggestion-chip.html#usage",
+      "group": "Components",
+      "page": "Suggestion Chip",
+      "title": "Group Layout",
+      "section": "Group Layout",
+      "text": "3-4개 적정 한 줄 안에 간결하게 한 화면에 4-6개 이내가 적정. 더 많아지면 가로 스크롤 또는 '더보기'로 묶습니다. 줄바꿈 시 한 줄당 3-4개를 권장합니다."
+    },
+    {
+      "id": 77,
+      "url": "components/suggestion-chip.html#how-to-use",
+      "group": "Components",
+      "page": "Suggestion Chip",
+      "title": "How to use",
+      "section": "How to use",
+      "text": "Translate Summarize Continue writing Do 짧은 동사구로 다음 액션을 명확히 표시합니다. Chip 1 Chip 2 Chip 3 Chip 4 Chip 5 Chip 6 Chip 7 Chip 8 Don't 너무 많은 chip 을 한 번에 노출하지 않습니다. 선택 부담을 줄여야 합니다."
+    },
+    {
+      "id": 78,
+      "url": "components/text-composer.html",
+      "group": "Components",
+      "page": "Text Composer",
+      "title": "Text Composer",
+      "section": "",
+      "text": "AI 프롬프트 입력의 핵심 컴포넌트입니다. 사용자가 자연어로 AI 와 대화하는 입구이며, 파일 첨부 · 음성 입력 · 전송 · 중지 등 AX 특유의 액션을 통합합니다. 멀티라인 입력과 Enter 전송 / Shift+Enter 줄바꿈 / Esc 취소 등 키보드 단축키를 지원합니다. 어떤 도움이 필요하신가요?"
+    },
+    {
+      "id": 79,
+      "url": "components/text-composer.html#anatomy",
+      "group": "Components",
+      "page": "Text Composer",
+      "title": "Anatomy",
+      "section": "Anatomy",
+      "text": "Input area + Action bar (좌측 tools / 우측 send) 구조. 생성 중에는 Send 가 Stop 으로 전환되어 사용자가 언제든 응답을 중단할 수 있습니다. 디자인 시스템에 대해 알려줘 1. Input area 2. Placeholder 3. Attach (📎) 4. Voice (🎤) 5. Send / Stop 6. Char counter 7. Model selector 8. Slash menu 9."
+    },
+    {
+      "id": 80,
+      "url": "components/text-composer.html#usage",
+      "group": "Components",
+      "page": "Text Composer",
+      "title": "Usage",
+      "section": "Usage",
+      "text": ""
+    },
+    {
+      "id": 81,
+      "url": "components/text-composer.html#usage",
+      "group": "Components",
+      "page": "Text Composer",
+      "title": "States",
+      "section": "States",
+      "text": "디자인 토큰 사용 방법을 설명해줘 Idle / Composing / Sending / Streaming / Error 다섯 상태. Streaming 중에는 Send 가 Stop 으로 바뀌고, 사용자가 다시 입력하면 새 turn 으로 처리됩니다."
+    },
+    {
+      "id": 82,
+      "url": "components/text-composer.html#usage",
+      "group": "Components",
+      "page": "Text Composer",
+      "title": "Keyboard Shortcuts",
+      "section": "Keyboard Shortcuts",
+      "text": "Enter 전송 · Shift+Enter 줄바꿈 Enter 전송 · Shift+Enter 줄바꿈 · Esc 입력 취소 · / slash 메뉴 · @ mention. 자주 쓰는 단축키는 placeholder 또는 tooltip 으로 노출합니다."
+    },
+    {
+      "id": 83,
+      "url": "components/text-composer.html#how-to-use",
+      "group": "Components",
+      "page": "Text Composer",
+      "title": "How to use",
+      "section": "How to use",
+      "text": "생성 중... Do 생성 중에는 Send 버튼을 Stop 으로 전환해 사용자가 언제든 중단할 수 있게 합니다. 생성 중 — 입력 비활성화 Don't 생성 중이라고 input 자체를 비활성화하지 않습니다. 다음 메시지를 미리 작성할 수 있게 둡니다."
+    },
+    {
+      "id": 84,
+      "url": "components/text-field.html",
+      "group": "Components",
+      "page": "Text Field",
+      "title": "Text Field",
+      "section": "",
+      "text": "짧은 텍스트 입력 컨트롤입니다. 폼·설정 화면에서 사용하며 label · helper · error 4-state 를 지원합니다. 입력 의도와 형식을 placeholder 가 아닌 label 로 명시하여 입력 시점에도 컨텍스트가 유지되도록 합니다. Email address name@company.com 알림을 받을 이메일 주소를 입력해주세요"
+    },
+    {
+      "id": 85,
+      "url": "components/text-field.html#anatomy",
+      "group": "Components",
+      "page": "Text Field",
+      "title": "Anatomy",
+      "section": "Anatomy",
+      "text": "Label 상단, Helper / Error 하단 배치. focus 시 보더 컬러·두께 변경, error 시 status-negative 컬러로 명확히 표시합니다. Email * name@company.com 필수 입력 항목 1. Label 2. Input 3. Placeholder 4. Helper 5. Error 6. Required * 7. Leading icon 8. Trailing icon 9. Counter 10. "
+    },
+    {
+      "id": 86,
+      "url": "components/text-field.html#usage",
+      "group": "Components",
+      "page": "Text Field",
+      "title": "Usage",
+      "section": "Usage",
+      "text": ""
+    },
+    {
+      "id": 87,
+      "url": "components/text-field.html#usage",
+      "group": "Components",
+      "page": "Text Field",
+      "title": "Input Types",
+      "section": "Input Types",
+      "text": "Email user@example.com type=\"email\" — 모바일 키보드 @ 키 노출 email · tel · number 등 적절한 input type 으로 모바일 키보드 자동 전환과 자동완성·검증을 활성화합니다."
+    },
+    {
+      "id": 88,
+      "url": "components/text-field.html#usage",
+      "group": "Components",
+      "page": "Text Field",
+      "title": "Validation Timing",
+      "section": "Validation Timing",
+      "text": "Email invalid-email 올바른 이메일 형식이 아닙니다 에러는 blur 또는 submit 시점에 표시. 사용자가 타이핑 중인 동안에는 가급적 에러를 보이지 않습니다."
+    },
+    {
+      "id": 89,
+      "url": "components/text-field.html#how-to-use",
+      "group": "Components",
+      "page": "Text Field",
+      "title": "How to use",
+      "section": "How to use",
+      "text": "User name 홍길동 Do Label 로 입력 의도를 명시하고, placeholder 는 예시 보조용으로만 사용합니다. User name label 없음 — 입력 시 컨텍스트 사라짐 Don't placeholder 만 두고 label 을 생략하지 않습니다. 입력 시 컨텍스트가 사라져 접근성이 깨집니다."
+    },
+    {
+      "id": 90,
+      "url": "foundation/color-scheme.html",
+      "group": "Foundation",
+      "page": "Color Scheme",
+      "title": "Color Scheme",
+      "section": "",
+      "text": "AX 인터페이스는 사용자, AI, 시스템 세 주체의 발화와 상태를 시각적으로 구분해야 합니다. Color Scheme 은 의미 기반 토큰으로 이 구분을 만들고, 라이트/다크 모드에서 동일하게 작동하도록 설계되어 어떤 컨텍스트에서도 안정적인 정보 위계를 보장합니다. Strong Neutral Alternative Assistive Streaming Positive Negative"
+    },
+    {
+      "id": 91,
+      "url": "foundation/color-scheme.html#anatomy",
+      "group": "Foundation",
+      "page": "Color Scheme",
+      "title": "Anatomy",
+      "section": "Anatomy",
+      "text": "Label·Surface·Line·Fill·Status 다섯 카테고리로 분리되어 컴포넌트가 의미를 명확히 표현합니다. 모든 토큰은 라이트와 다크 두 모드에서 서로 매핑된 페어로 정의되어 컴포넌트는 별도 분기 없이 작동합니다. label strong surface subtle surface elevated line solid fill normal Label / Strong — 강조 텍스트 Label / Neutral — 본문 텍"
+    },
+    {
+      "id": 92,
+      "url": "foundation/color-scheme.html#usage",
+      "group": "Foundation",
+      "page": "Color Scheme",
+      "title": "Usage",
+      "section": "Usage",
+      "text": ""
+    },
+    {
+      "id": 93,
+      "url": "foundation/color-scheme.html#usage",
+      "group": "Foundation",
+      "page": "Color Scheme",
+      "title": "Mode Adaptation",
+      "section": "Mode Adaptation",
+      "text": "Light AI 응답 시맨틱 토큰으로 어떤 컴포넌트도 두 모드를 자연스럽게 지원합니다. Dark AI 응답 시맨틱 토큰으로 어떤 컴포넌트도 두 모드를 자연스럽게 지원합니다. OS 설정 또는 사용자의 명시 선택에 따라 토큰의 실제 값이 자동 전환됩니다. 라이트 → 다크로 전환되더라도 컴포넌트는 토큰 이름만 참조하므로 동일한 의미·위계가 유지됩니다."
+    },
+    {
+      "id": 94,
+      "url": "foundation/color-scheme.html#usage",
+      "group": "Foundation",
+      "page": "Color Scheme",
+      "title": "AX Status Colors",
+      "section": "AX Status Colors",
+      "text": "Generating Completed Failed AI 응답 상태(생성 중·완료·오류)는 색으로 즉시 구분합니다. 사용자는 화면 변화만 보고도 시스템이 무엇을 하는지 알 수 있어야 합니다. 색은 항상 보조 시그널(아이콘·텍스트)과 함께 사용해 색맹·저시력 사용자도 정보를 잃지 않도록 합니다."
+    },
+    {
+      "id": 95,
+      "url": "foundation/color-scheme.html#how-to-use",
+      "group": "Foundation",
+      "page": "Color Scheme",
+      "title": "How to use",
+      "section": "How to use",
+      "text": "label-strong 시맨틱 토큰 사용 컴포넌트가 의미 토큰만 참조하면 모드 전환이 자동으로 작동합니다. Do 시맨틱 토큰(label-strong, surface-elevated)을 사용하여 의미와 모드 적응을 모두 보장합니다. #171719 ← hardcoded Primitive 직접 사용 다크 모드에선 검은 글씨가 그대로 남아 가독성이 깨집니다. Don't Primitive 컬러(#171719)를 컴포넌트에서 직접 사용하"
+    },
+    {
+      "id": 96,
+      "url": "foundation/dimension.html",
+      "group": "Foundation",
+      "page": "Dimension",
+      "title": "Dimension",
+      "section": "",
+      "text": "AX 인터페이스는 짧은 액션 UI 와 긴 AI 응답이 같은 화면에 공존합니다. 8 배수 그리드의 통합 디멘션 시스템은 두 컨텍스트 모두에서 일정한 리듬을 만들고, 비례 관계로 컴포넌트가 자연스럽게 sm/md/lg 변형으로 확장됩니다. Space 2 8 Space 3 12 Space 4 16 Space 5 24 Space 6 40 Space 7 60 Space 8 96"
+    },
+    {
+      "id": 97,
+      "url": "foundation/dimension.html#anatomy",
+      "group": "Foundation",
+      "page": "Dimension",
+      "title": "Anatomy",
+      "section": "Anatomy",
+      "text": "Space, Radius, Size 세 축이 모두 8의 배수 위에서 작동합니다. 컴포넌트 사이즈가 바뀌면 내부 padding 과 radius 가 비례로 따라가 자연스럽게 sm/md/lg 변형이 만들어집니다. SM · 8 MD · 12 LG · 24 Pill · 99 Space 2 — 8px (인라인 칩 내부) Space 3 — 12px (버튼 vertical padding) Space 4 — 16px (카드 내부 갭) Spac"
+    },
+    {
+      "id": 98,
+      "url": "foundation/dimension.html#usage",
+      "group": "Foundation",
+      "page": "Dimension",
+      "title": "Usage",
+      "section": "Usage",
+      "text": ""
+    },
+    {
+      "id": 99,
+      "url": "foundation/dimension.html#usage",
+      "group": "Foundation",
+      "page": "Dimension",
+      "title": "Content Density",
+      "section": "Content Density",
+      "text": "SM MD LG SM 8/12 · MD 12/16 · LG 16/24 (padding / radius) AX 응답이 빠르게 쌓이는 화면(채팅·로그·리스트)에선 compact 디멘션, 일반 폼·설정에선 comfortable 디멘션을 사용합니다. 같은 토큰 시스템 안에서 단계만 다르게 선택하여 둘이 자연스럽게 공존하도록 합니다."
+    },
+    {
+      "id": 100,
+      "url": "foundation/dimension.html#usage",
+      "group": "Foundation",
+      "page": "Dimension",
+      "title": "Proportional Scaling",
+      "section": "Proportional Scaling",
+      "text": "작은 액션 기본 액션 강조 액션 컴포넌트가 커질수록 padding·radius 비례 증가 사이즈가 커지면 padding 과 radius 가 같은 비율로 증가합니다. SM 컴포넌트는 작은 radius, LG 컴포넌트는 큰 radius. 비례가 깨지면 카드와 그 안의 chip 이 같은 radius 를 갖는 어색한 화면이 됩니다."
+    },
+    {
+      "id": 101,
+      "url": "foundation/dimension.html#how-to-use",
+      "group": "Foundation",
+      "page": "Dimension",
+      "title": "How to use",
+      "section": "How to use",
+      "text": "SM 8 MD 12 LG 24 Do 토큰화된 dimension 값(--space-4, --radius-md)을 사용해 비례 관계를 자동으로 유지합니다. 10px ← 14px ← 18px ← Don't 10, 14, 18 같은 비표준 값을 임의로 쓰지 않습니다. 다른 컴포넌트와의 정렬·비례가 깨집니다."
+    },
+    {
+      "id": 102,
+      "url": "foundation/effect.html",
+      "group": "Foundation",
+      "page": "Effect",
+      "title": "Effect",
+      "section": "",
+      "text": "사용자가 시스템의 상태와 위계를 인지하도록 돕는 시각 효과 시스템입니다. AX 인터페이스에선 AI 응답 생성, 상태 전환, 패널 등장 등 비동기 변화가 빈번하므로 elevation·motion 토큰의 일관된 사용이 특히 중요합니다. 0 · Flat 1 · Card 2 · Dropdown 3 · Modal 4 · Toast"
+    },
+    {
+      "id": 103,
+      "url": "foundation/effect.html#anatomy",
+      "group": "Foundation",
+      "page": "Effect",
+      "title": "Anatomy",
+      "section": "Anatomy",
+      "text": "Elevation 0~4 다섯 단계는 z-축 위계를 표현하고, Duration 3단(fast/normal/slow)과 Easing 4종은 인터랙션 리듬을 만듭니다. 다크 모드에서는 그림자 alpha 가 자동 강화되어 같은 위계감이 유지됩니다. Card Dropdown Modal Elevation 0 — flat Elevation 1 — card Elevation 2 — dropdown Elevation 3 — modal Ele"
+    },
+    {
+      "id": 104,
+      "url": "foundation/effect.html#usage",
+      "group": "Foundation",
+      "page": "Effect",
+      "title": "Usage",
+      "section": "Usage",
+      "text": ""
+    },
+    {
+      "id": 105,
+      "url": "foundation/effect.html#usage",
+      "group": "Foundation",
+      "page": "Effect",
+      "title": "Layering",
+      "section": "Layering",
+      "text": "인접한 표면 레이어 간 elevation 차이를 한 단계 이상 두어 시각적 분리감을 만듭니다. 카드(L1) 위의 dropdown(L2), modal(L3) 식으로 위계를 쌓아 올라가며, 같은 위계 요소가 서로 다른 elevation 을 갖지 않도록 합니다."
+    },
+    {
+      "id": 106,
+      "url": "foundation/effect.html#usage",
+      "group": "Foundation",
+      "page": "Effect",
+      "title": "AX Motion",
+      "section": "AX Motion",
+      "text": "AI thinking — stagger 150ms AI 응답 streaming, 패널 등장, 상태 전환 등 AX 특유의 비동기 변화에 모션 토큰을 일관되게 사용합니다. 모션은 단순 장식이 아니라 의미(생성 중·로딩·완료)를 전달하는 도구이며, prefers-reduced-motion 설정을 항상 존중합니다."
+    },
+    {
+      "id": 107,
+      "url": "foundation/effect.html#how-to-use",
+      "group": "Foundation",
+      "page": "Effect",
+      "title": "How to use",
+      "section": "How to use",
+      "text": "Card · 1 Modal · 3 Do 토큰화된 elevation·duration·easing 값을 사용해 인터랙션 리듬을 통일합니다. L4 ← L4 ← L4 ← Don't 장식적 목적의 모션·강한 그림자를 본문에 과도하게 적용하지 않습니다. 인지 부하를 높입니다."
+    },
+    {
+      "id": 108,
+      "url": "foundation/index.html",
+      "group": "Foundation",
+      "page": "Foundation",
+      "title": "Foundation",
+      "section": "",
+      "text": "디자인 시스템의 시각적 기반이 되는 토큰을 정의합니다. 컬러 스킴, 디멘션, 텍스트, 이펙트 네 축으로 원자적 가치를 시맨틱 단위로 정리하여, 모든 컴포넌트와 화면이 일관된 비주얼 언어를 공유하도록 합니다."
+    },
+    {
+      "id": 109,
+      "url": "foundation/index.html#foundation",
+      "group": "Foundation",
+      "page": "Foundation",
+      "title": "Foundation",
+      "section": "Foundation",
+      "text": "자세히 보기"
+    },
+    {
+      "id": 110,
+      "url": "foundation/index.html#foundation",
+      "group": "Foundation",
+      "page": "Foundation",
+      "title": "Color Scheme",
+      "section": "Color Scheme",
+      "text": "라이트/다크 자동 적응 시맨틱 컬러 토큰 — Label / Surface / Line / Status. 자세히 보기"
+    },
+    {
+      "id": 111,
+      "url": "foundation/index.html#foundation",
+      "group": "Foundation",
+      "page": "Foundation",
+      "title": "Dimension",
+      "section": "Dimension",
+      "text": "Size · Space · Radius 통합 디멘션 시스템 — 8 배수 그리드. Aa 가나 자세히 보기"
+    },
+    {
+      "id": 112,
+      "url": "foundation/index.html#foundation",
+      "group": "Foundation",
+      "page": "Foundation",
+      "title": "Text",
+      "section": "Text",
+      "text": "9단계 타입 스케일 — Pretendard Variable + Poppins. 자세히 보기"
+    },
+    {
+      "id": 113,
+      "url": "foundation/index.html#foundation",
+      "group": "Foundation",
+      "page": "Foundation",
+      "title": "Effect",
+      "section": "Effect",
+      "text": "Elevation · Motion · Transition — 인터랙티브 시각 효과."
+    },
+    {
+      "id": 114,
+      "url": "foundation/text.html",
+      "group": "Foundation",
+      "page": "Text",
+      "title": "Text",
+      "section": "",
+      "text": "AX 인터페이스의 절반은 텍스트입니다. AI 응답, 사용자 입력, 인용, 메타데이터 등 다양한 텍스트 유형이 같은 시스템 안에서 일관된 위계로 표현되어야 합니다. Pretendard Variable + Poppins 조합이 한·영 혼용 환경에서도 안정적인 가독성과 시각적 정렬을 제공합니다. Display From Idea to Flow Heading 1 AX 가 만드는 새로운 경험 Heading 3 설계 원칙과 흐름 Body "
+    },
+    {
+      "id": 115,
+      "url": "foundation/text.html#anatomy",
+      "group": "Foundation",
+      "page": "Text",
+      "title": "Anatomy",
+      "section": "Anatomy",
+      "text": "Display → Heading → Body → Label → Caption 다섯 단계 위계 안에 9개 스케일이 정의됩니다. 각 단계는 명확한 사이즈·letter-spacing 으로 시각적 구분을 만들며, 같은 단계는 항상 같은 의미로 사용됩니다. H1 · 600 Heading H3 · 600 Subheading Body · 400 본문 텍스트가 여기 들어갑니다. Caption META · 11 / 0.34 Display 72"
+    },
+    {
+      "id": 116,
+      "url": "foundation/text.html#usage",
+      "group": "Foundation",
+      "page": "Text",
+      "title": "Usage",
+      "section": "Usage",
+      "text": ""
+    },
+    {
+      "id": 117,
+      "url": "foundation/text.html#usage",
+      "group": "Foundation",
+      "page": "Text",
+      "title": "Mixed Script",
+      "section": "Mixed Script",
+      "text": "사용자와 AI Agent 가 함께 작업하는 AX UI 는 Pretendard Variable 로 한·영 혼용 환경에서도 같은 베이스라인을 유지합니다. 한글과 영문이 섞인 문장에서도 동일한 위계와 베이스라인이 유지되도록 Pretendard Variable 을 본문 전역에 적용합니다. 디스플레이 영역만 Poppins 로 분리하여 영문 헤더의 무게감을 표현합니다."
+    },
+    {
+      "id": 118,
+      "url": "foundation/text.html#usage",
+      "group": "Foundation",
+      "page": "Text",
+      "title": "AI Response Streaming",
+      "section": "AI Response Streaming",
+      "text": "사용자 의도를 파악한 다음 적절한 도구를 호출하고 결과를 정리하여 응답합니다 AI 응답은 글자 단위로 점진적으로 채워지는 streaming 표현이 기본입니다. 사용자에게 진행감을 전달하고 응답이 멈춘 듯한 느낌을 방지합니다. Body M 사이즈와 1.5 line-height 가 긴 응답을 읽기에 가장 적합합니다."
+    },
+    {
+      "id": 119,
+      "url": "foundation/text.html#how-to-use",
+      "group": "Foundation",
+      "page": "Text",
+      "title": "How to use",
+      "section": "How to use",
+      "text": "H1 스케일 단계 사용 Body 본문은 Body M 으로 일관되게. Do 위계에 맞는 스케일 단계만 사용합니다. 본문은 Body M, 제목은 Heading 1-3. 19px ← 비표준 사이즈 13px ← 스케일 외 값 Don't 강조를 위해 임의로 폰트 크기·굵기를 변경하지 않습니다. 스케일 외 값은 시스템 일관성을 해칩니다."
+    },
+    {
+      "id": 120,
+      "url": "get-started/index.html",
+      "group": "Get a start",
+      "page": "Get a start",
+      "title": "Getting started",
+      "section": "",
+      "text": "MIDAS AX System은 AX 환경에 최적화된 제품 경험을 만들기 위한 디자인 시스템입니다. 디자인 원칙, 컴포넌트, 패턴, UX 가이드라인을 기반으로 누구나 일관된 경험을 빠르게 설계하고 구현할 수 있도록 지원합니다. 단순 UI 라이브러리가 아닌, AI와 사람이 함께 효율적으로 제품을 만들기 위한 공통 언어와 작업 기준을 제공합니다."
+    },
+    {
+      "id": 121,
+      "url": "get-started/index.html#what-is-midas-ax",
+      "group": "Get a start",
+      "page": "Get a start",
+      "title": "What is MIDAS AX System",
+      "section": "What is MIDAS AX System",
+      "text": "MIDAS AX System은 반복되는 화면 제작과 정렬 비용을 줄이고, 더 중요한 사용자 경험과 문제 해결에 집중할 수 있도록 만들어진 AX 기반 디자인 시스템입니다. 디자인 시스템, UX 원칙, 패턴, 인터랙션, 라이팅 기준 등을 하나의 흐름으로 연결하여 기획부터 디자인, 개발까지 동일한 기준으로 협업할 수 있도록 구성되어 있습니다. 피그마 시스템 바로가기 GitHub 바로가기 문의 가이드 및 시스템 관련 문의는 브랜드디자"
+    },
+    {
+      "id": 122,
+      "url": "index.html",
+      "group": "Home",
+      "page": "MIDAS AX Design System",
+      "title": "MIDAS AX Design System Design Once. Scale with AX.",
+      "section": "",
+      "text": "사람과 AX가 함께 활용할 수 있도록 패턴, 정책, 구조까지 연결된 디자인 시스템을 구축합니다. 피그마 링크 바로가기"
+    },
+    {
+      "id": 123,
+      "url": "index.html",
+      "group": "Home",
+      "page": "MIDAS AX Design System",
+      "title": "Pattern",
+      "section": "Pattern",
+      "text": ""
+    },
+    {
+      "id": 124,
+      "url": "index.html",
+      "group": "Home",
+      "page": "MIDAS AX Design System",
+      "title": "Agentic UI",
+      "section": "Agentic UI",
+      "text": "일관된 제품 경험을 위한 재사용 가능한 UI 컴포넌트와 인터랙션 기준을 제공합니다."
+    },
+    {
+      "id": 125,
+      "url": "index.html",
+      "group": "Home",
+      "page": "MIDAS AX Design System",
+      "title": "Embedded UI",
+      "section": "Embedded UI",
+      "text": "AX 디자인 시스템의 기반이 되는 컬러, 타이포그래피, 토큰, 레이아웃 구조를 정의합니다."
+    },
+    {
+      "id": 126,
+      "url": "index.html",
+      "group": "Home",
+      "page": "MIDAS AX Design System",
+      "title": "Automation UI",
+      "section": "Automation UI",
+      "text": "반복되는 사용자 흐름과 운영 구조를 AX 환경까지 고려한 패턴 형태로 제공합니다."
+    },
+    {
+      "id": 127,
+      "url": "index.html",
+      "group": "Home",
+      "page": "MIDAS AX Design System",
+      "title": "FAQ",
+      "section": "FAQ",
+      "text": "MIDAS AX 디자인 시스템은 무엇인가요? MIDAS의 제품 전반에서 사람과 AX가 일관된 경험을 만들 수 있도록 정의한 디자인 원칙과 컴포넌트 라이브러리입니다. 누구를 위한 시스템인가요? MIDAS 제품을 만드는 모든 디자이너, 엔지니어, 기획자, 그리고 AX 시스템을 활용하는 외부 파트너를 위한 공통 자산입니다. 어떤 프로젝트에서 사용해야 하나요? MIDAS 브랜드와 연결된 모든 디지털 제품에서 사용하는 것을 권장합니다."
+    },
+    {
+      "id": 128,
+      "url": "pattern/agentic-ui.html",
+      "group": "Pattern",
+      "page": "Agentic UI",
+      "title": "Agentic UI",
+      "section": "",
+      "text": "사용자와 AX가 상호작용하는 반복 가능한 경험 구조를 정의합니다. MIDAS AX System의 Pattern은 사용자 · AI · 시스템 간의 역할과 흐름을 구조화한 AX 인터랙션 단위입니다."
+    },
+    {
+      "id": 129,
+      "url": "pattern/agentic-ui.html#global-chat-assistant",
+      "group": "Pattern",
+      "page": "Agentic UI",
+      "title": "Global Chat Assistant",
+      "section": "Global Chat Assistant",
+      "text": "카드가 표시될 디바이스 환경에 맞춰 데스크톱과 모바일로 구분하여 사용합니다. 썸네일은 데스크톱에서 3:2, 모바일에서 4:3 비율을 기본으로 하며 필요한 경우 자유롭게 변경하여 사용할 수 있습니다. 피그마 링크 바로가기"
+    },
+    {
+      "id": 130,
+      "url": "pattern/agentic-ui.html#chat-canvas-panel",
+      "group": "Pattern",
+      "page": "Agentic UI",
+      "title": "Chat + Canvas Panel",
+      "section": "Chat + Canvas Panel",
+      "text": "카드가 표시될 디바이스 환경에 맞춰 데스크톱과 모바일로 구분하여 사용합니다. 썸네일은 데스크톱에서 3:2, 모바일에서 4:3 비율을 기본으로 하며 필요한 경우 자유롭게 변경하여 사용할 수 있습니다. 피그마 링크 바로가기"
+    },
+    {
+      "id": 131,
+      "url": "pattern/agentic-ui.html#dedicated-agent-workspace",
+      "group": "Pattern",
+      "page": "Agentic UI",
+      "title": "Dedicated Agent Workspace",
+      "section": "Dedicated Agent Workspace",
+      "text": "카드가 표시될 디바이스 환경에 맞춰 데스크톱과 모바일로 구분하여 사용합니다. 썸네일은 데스크톱에서 3:2, 모바일에서 4:3 비율을 기본으로 하며 필요한 경우 자유롭게 변경하여 사용할 수 있습니다. 피그마 링크 바로가기"
+    },
+    {
+      "id": 132,
+      "url": "pattern/automation-ui.html",
+      "group": "Pattern",
+      "page": "Automation UI",
+      "title": "Automation UI",
+      "section": "",
+      "text": "사용자와 AX가 상호작용하는 반복 가능한 경험 구조를 정의합니다. MIDAS AX System의 Pattern은 사용자 · AI · 시스템 간의 역할과 흐름을 구조화한 AX 인터랙션 단위입니다."
+    },
+    {
+      "id": 133,
+      "url": "pattern/automation-ui.html#global-chat-assistant",
+      "group": "Pattern",
+      "page": "Automation UI",
+      "title": "Global Chat Assistant",
+      "section": "Global Chat Assistant",
+      "text": "카드가 표시될 디바이스 환경에 맞춰 데스크톱과 모바일로 구분하여 사용합니다. 썸네일은 데스크톱에서 3:2, 모바일에서 4:3 비율을 기본으로 하며 필요한 경우 자유롭게 변경하여 사용할 수 있습니다. 피그마 링크 바로가기"
+    },
+    {
+      "id": 134,
+      "url": "pattern/automation-ui.html#chat-canvas-panel",
+      "group": "Pattern",
+      "page": "Automation UI",
+      "title": "Chat + Canvas Panel",
+      "section": "Chat + Canvas Panel",
+      "text": "카드가 표시될 디바이스 환경에 맞춰 데스크톱과 모바일로 구분하여 사용합니다. 썸네일은 데스크톱에서 3:2, 모바일에서 4:3 비율을 기본으로 하며 필요한 경우 자유롭게 변경하여 사용할 수 있습니다. 피그마 링크 바로가기"
+    },
+    {
+      "id": 135,
+      "url": "pattern/automation-ui.html#dedicated-agent-workspace",
+      "group": "Pattern",
+      "page": "Automation UI",
+      "title": "Dedicated Agent Workspace",
+      "section": "Dedicated Agent Workspace",
+      "text": "카드가 표시될 디바이스 환경에 맞춰 데스크톱과 모바일로 구분하여 사용합니다. 썸네일은 데스크톱에서 3:2, 모바일에서 4:3 비율을 기본으로 하며 필요한 경우 자유롭게 변경하여 사용할 수 있습니다. 피그마 링크 바로가기"
+    },
+    {
+      "id": 136,
+      "url": "pattern/embedded-ui.html",
+      "group": "Pattern",
+      "page": "Embedded UI",
+      "title": "Embedded UI",
+      "section": "",
+      "text": "사용자와 AX가 상호작용하는 반복 가능한 경험 구조를 정의합니다. MIDAS AX System의 Pattern은 사용자 · AI · 시스템 간의 역할과 흐름을 구조화한 AX 인터랙션 단위입니다."
+    },
+    {
+      "id": 137,
+      "url": "pattern/embedded-ui.html#global-chat-assistant",
+      "group": "Pattern",
+      "page": "Embedded UI",
+      "title": "Global Chat Assistant",
+      "section": "Global Chat Assistant",
+      "text": "카드가 표시될 디바이스 환경에 맞춰 데스크톱과 모바일로 구분하여 사용합니다. 썸네일은 데스크톱에서 3:2, 모바일에서 4:3 비율을 기본으로 하며 필요한 경우 자유롭게 변경하여 사용할 수 있습니다. 피그마 링크 바로가기"
+    },
+    {
+      "id": 138,
+      "url": "pattern/embedded-ui.html#chat-canvas-panel",
+      "group": "Pattern",
+      "page": "Embedded UI",
+      "title": "Chat + Canvas Panel",
+      "section": "Chat + Canvas Panel",
+      "text": "카드가 표시될 디바이스 환경에 맞춰 데스크톱과 모바일로 구분하여 사용합니다. 썸네일은 데스크톱에서 3:2, 모바일에서 4:3 비율을 기본으로 하며 필요한 경우 자유롭게 변경하여 사용할 수 있습니다. 피그마 링크 바로가기"
+    },
+    {
+      "id": 139,
+      "url": "pattern/embedded-ui.html#dedicated-agent-workspace",
+      "group": "Pattern",
+      "page": "Embedded UI",
+      "title": "Dedicated Agent Workspace",
+      "section": "Dedicated Agent Workspace",
+      "text": "카드가 표시될 디바이스 환경에 맞춰 데스크톱과 모바일로 구분하여 사용합니다. 썸네일은 데스크톱에서 3:2, 모바일에서 4:3 비율을 기본으로 하며 필요한 경우 자유롭게 변경하여 사용할 수 있습니다. 피그마 링크 바로가기"
+    },
+    {
+      "id": 140,
+      "url": "pattern/index.html",
+      "group": "Pattern",
+      "page": "Pattern",
+      "title": "Pattern",
+      "section": "",
+      "text": "사용자와 AX가 상호작용하는 반복 가능한 경험 구조를 정의합니다. MIDAS AX System의 Pattern은 사용자 · AI · 시스템 간의 역할과 흐름을 구조화한 AX 인터랙션 단위입니다. 각 Pattern은 특정 목적과 상황에 맞는 인터랙션 흐름, 상태 변화, 승인 구조, 컨텍스트 처리 방식 등을 포함합니다."
+    },
+    {
+      "id": 141,
+      "url": "pattern/index.html#pattern",
+      "group": "Pattern",
+      "page": "Pattern",
+      "title": "Pattern",
+      "section": "Pattern",
+      "text": "자세히 보기"
+    },
+    {
+      "id": 142,
+      "url": "pattern/index.html#pattern",
+      "group": "Pattern",
+      "page": "Pattern",
+      "title": "Agentic UI",
+      "section": "Agentic UI",
+      "text": "사용자가 명시적으로 AI 와 대화하는 모든 상황에 사용하는 UI 패턴. 자세히 보기"
+    },
+    {
+      "id": 143,
+      "url": "pattern/index.html#pattern",
+      "group": "Pattern",
+      "page": "Pattern",
+      "title": "Embedded UI",
+      "section": "Embedded UI",
+      "text": "사용자의 본 작업을 방해하지 않으면서 보조하는 AI 패턴. 자세히 보기"
+    },
+    {
+      "id": 144,
+      "url": "pattern/index.html#pattern",
+      "group": "Pattern",
+      "page": "Pattern",
+      "title": "Automation UI",
+      "section": "Automation UI",
+      "text": "AI 자동 실행 결과 검토 또는 사용자가 자동화 흐름을 직접 설계하는 패턴."
+    },
+    {
+      "id": 145,
+      "url": "system.html",
+      "group": "Home",
+      "page": "System Reference",
+      "title": "System Reference",
+      "section": "",
+      "text": "MIDAS AX Design System 의 모든 토큰, 레이아웃, 컴포넌트, 검수 결과를 한 곳에 정리한 통합 참조 문서입니다. 각 항목은 토큰 정의 / 시각 예시 / 마크업 템플릿 / 사용 위치를 함께 표시합니다. 라이트·다크 모드에서 모든 토큰이 자동 적응되며, 컴포넌트는 같은 마크업으로 두 모드 모두에서 작동합니다."
+    },
+    {
+      "id": 146,
+      "url": "system.html#reference",
+      "group": "Home",
+      "page": "System Reference",
+      "title": "Reference",
+      "section": "Reference",
+      "text": "자세히 보기"
+    },
+    {
+      "id": 147,
+      "url": "system.html#reference",
+      "group": "Home",
+      "page": "System Reference",
+      "title": "Foundation",
+      "section": "Foundation",
+      "text": "색·치수·텍스트·효과 — 컴포넌트가 의존하는 시각 토큰의 단일 소스. 자세히 보기"
+    },
+    {
+      "id": 148,
+      "url": "system.html#reference",
+      "group": "Home",
+      "page": "System Reference",
+      "title": "Layout",
+      "section": "Layout",
+      "text": "GNB · SNB · TOC · Footer · Page Grid — 전역 레이아웃 구조. 자세히 보기"
+    },
+    {
+      "id": 149,
+      "url": "system.html#reference",
+      "group": "Home",
+      "page": "System Reference",
+      "title": "Components",
+      "section": "Components",
+      "text": "Buttons · Cards · Thumbnails · FAQ — 실제 사용되는 UI 블록. OK PARTIAL 자세히 보기"
+    },
+    {
+      "id": 150,
+      "url": "system.html#reference",
+      "group": "Home",
+      "page": "System Reference",
+      "title": "Audit",
+      "section": "Audit",
+      "text": "토큰 사용 일관성 · 카드 변형 매핑 — 시스템 자가 점검."
+    },
+    {
+      "id": 151,
+      "url": "system/audit.html",
+      "group": "Docs",
+      "page": "Audit",
+      "title": "Audit",
+      "section": "",
+      "text": "시스템 일관성 자가 점검표. 토큰 사용 일관성, 카드 변형 분류, 사이트 페이지 매핑."
+    },
+    {
+      "id": 152,
+      "url": "system/audit.html#audit-tokens",
+      "group": "Docs",
+      "page": "Audit",
+      "title": "Token Coverage",
+      "section": "Token Coverage",
+      "text": "영역 토큰 사용 다크 적응 GNB bg + text OK rgba bg + label-strong OK SNB hover/active bg OK fill-hover / fill-pressed OK Cards bg + border OK surface-subtle / line-solid OK rgba 3% 보정 Buttons bg + text OK label-strong / fill-normal OK spec-hero/image "
+    },
+    {
+      "id": 153,
+      "url": "system/audit.html#audit-cards",
+      "group": "Docs",
+      "page": "Audit",
+      "title": "Card / Thumbnail Variants Map",
+      "section": "Card / Thumbnail Variants Map",
+      "text": "컴포넌트 사용처 특징 .gallery-card Overview 페이지 갤러리 hover scale + dark overlay + CTA fade-in-up .p-card 메인(index.html) Pattern 3-up hover scale, 그라데이션 미디어 .spec-hero foundation/components/pattern detail 상단 정적, 427px, hover 없음 .spec-image foundation/"
+    },
+    {
+      "id": 154,
+      "url": "system/audit.html#links",
+      "group": "Docs",
+      "page": "Audit",
+      "title": "Quick Links",
+      "section": "Quick Links",
+      "text": "섹션 경로 Home (main) index.html Get a start get-started/index.html Foundation foundation/index.html Components components/index.html Pattern pattern/index.html"
+    },
+    {
+      "id": 155,
+      "url": "system/components.html",
+      "group": "Docs",
+      "page": "Components",
+      "title": "Components",
+      "section": "",
+      "text": "실제 사용자 화면에 렌더되는 재사용 가능한 UI 블록. 모두 토큰 사용 → 라이트·다크 자동 적응. 썸네일 안에서만 쓰이는 demo 헬퍼 (chat, code-block 등) 는 제외됨."
+    },
+    {
+      "id": 156,
+      "url": "system/components.html#buttons",
+      "group": "Docs",
+      "page": "Components",
+      "title": "Pill Button (Hero CTA)",
+      "section": "Pill Button (Hero CTA)",
+      "text": "메인 페이지 Hero 의 핵심 액션 버튼. fill-normal bg + label-strong text, hover 시 inverse 색 반전. 피그마 링크 바로가기 <a class=\"btn-pill\" href=\"#\">CTA Label</a>"
+    },
+    {
+      "id": 157,
+      "url": "system/components.html#cards",
+      "group": "Docs",
+      "page": "Components",
+      "title": "Gallery Card",
+      "section": "Gallery Card",
+      "text": "Overview 페이지의 카드 그리드. 미디어 + 본문, hover 시 다크 overlay + CTA fade-in-up + 이미지 1.08 scale. 자세히 보기"
+    },
+    {
+      "id": 158,
+      "url": "system/components.html#cards",
+      "group": "Docs",
+      "page": "Components",
+      "title": "Card Title",
+      "section": "Card Title",
+      "text": "Card description — 한 줄 또는 두 줄. <a class=\"gallery-card\" href=\"...\"> <div class=\"gallery-card__media\"> <img src=\"...\" alt=\"\" /> <!-- 또는 .card-demo 라이브 데모 --> <span class=\"gallery-card__cta\">자세히 보기</span> </div> <div class=\"gallery-card__body\""
+    },
+    {
+      "id": 159,
+      "url": "system/components.html#cards",
+      "group": "Docs",
+      "page": "Components",
+      "title": "Pattern Card (Main Home)",
+      "section": "Pattern Card (Main Home)",
+      "text": "메인 페이지의 Pattern 3-up 카드. p-card 클래스 사용. 그라데이션 미디어 + hover scale. <a class=\"p-card\" href=\"...\"> <div class=\"p-card__media\"><img src=\"...\" alt=\"\" /></div> <div class=\"p-card__body\"> <h3 class=\"p-card__title\">Title</h3> <p class=\"p-card__desc\""
+    },
+    {
+      "id": 160,
+      "url": "system/components.html#thumbnails",
+      "group": "Docs",
+      "page": "Components",
+      "title": "Image Thumbnails (Detail Pages)",
+      "section": "Image Thumbnails (Detail Pages)",
+      "text": "Detail 페이지에서 사용하는 이미지 컨테이너 3 종. 클래스 높이 인터랙션 용도 .spec-hero 427px 없음 (정적) 페이지 상단 큰 이미지 .spec-image 270px 없음 (정적) Anatomy/Usage 일반 이미지 영역 .spec-section__media 370px hover 다크 overlay + CTA Pattern detail Figma 링크 카드 <!-- 정적 이미지 영역 --> <div clas"
+    },
+    {
+      "id": 161,
+      "url": "system/components.html#faq",
+      "group": "Docs",
+      "page": "Components",
+      "title": "FAQ Accordion",
+      "section": "FAQ Accordion",
+      "text": "메인 페이지 FAQ. 클릭 시 grid-template-rows 트랜지션으로 부드러운 슬라이드 다운. FAQ 질문 예시 <div class=\"faq\"> <div class=\"faq__item\"> <button class=\"faq__summary\" type=\"button\" aria-expanded=\"false\"> <span class=\"faq__q\">Question</span> <span class=\"faq__icon\"><svg"
+    },
+    {
+      "id": 162,
+      "url": "system/components.html#link-buttons",
+      "group": "Docs",
+      "page": "Components",
+      "title": "Link Buttons",
+      "section": "Link Buttons",
+      "text": "Get a start 페이지의 2-col 외부 링크 버튼. radius 12, outline 스타일. 피그마 시스템 바로가기 GitHub 바로가기 <div class=\"link-buttons\"> <a class=\"link-button\" href=\"#\" target=\"_blank\" rel=\"noopener\">Label</a> <a class=\"link-button\" href=\"#\" target=\"_blank\" rel=\"noope"
+    },
+    {
+      "id": 163,
+      "url": "system/components.html#badges",
+      "group": "Docs",
+      "page": "Components",
+      "title": "Do / Don't Badges",
+      "section": "Do / Don't Badges",
+      "text": "Detail 페이지의 How to use 섹션에서 사용. 상태 컬러 + 아이콘 + 라벨. Do Don't <span class=\"spec-badge spec-badge--do\"><svg>...</svg>Do</span> <span class=\"spec-badge spec-badge--dont\"><svg>...</svg>Don't</span>"
+    },
+    {
+      "id": 164,
+      "url": "system/foundation.html",
+      "group": "Docs",
+      "page": "Foundation",
+      "title": "Foundation",
+      "section": "",
+      "text": "색·치수·텍스트·효과 — 컴포넌트가 의존하는 시각 토큰의 단일 소스. 각 카테고리는 라이트 / 다크 두 모드의 값을 함께 정의하며, 컴포넌트는 토큰명만 참조하여 모드 전환에 자동 적응합니다."
+    },
+    {
+      "id": 165,
+      "url": "system/foundation.html#color",
+      "group": "Docs",
+      "page": "Foundation",
+      "title": "Color Scheme",
+      "section": "Color Scheme",
+      "text": "의미 기반 컬러 토큰. 모든 컴포넌트는 이 토큰만 참조하여 모드 전환에 자동 적응합니다."
+    },
+    {
+      "id": 166,
+      "url": "system/foundation.html#color",
+      "group": "Docs",
+      "page": "Foundation",
+      "title": "Label (텍스트 컬러)",
+      "section": "Label (텍스트 컬러)",
+      "text": "--color-label-strong L:#171719 / D:#F7F7F8 --color-label-neutral L:rgba(46,47,51,.88) / D:#C2C4C8 --color-label-alternative 61% alpha --color-label-assistive 28% alpha"
+    },
+    {
+      "id": 167,
+      "url": "system/foundation.html#color",
+      "group": "Docs",
+      "page": "Foundation",
+      "title": "Surface (배경)",
+      "section": "Surface (배경)",
+      "text": "--color-background L:#FFFFFF / D:#121212 --color-surface-elevated L:#FFFFFF / D:#1B1C1E --color-surface-subtle L:#F7F7F8 / D:rgba(247,247,248,.03) --color-fill-normal rgba(112,115,124,.08)"
+    },
+    {
+      "id": 168,
+      "url": "system/foundation.html#color",
+      "group": "Docs",
+      "page": "Foundation",
+      "title": "Inverse",
+      "section": "Inverse",
+      "text": "--color-inverse-background L:#1B1C1E / D:#F7F7F8 --color-inverse-label L:#F7F7F8 / D:#1B1C1E"
+    },
+    {
+      "id": 169,
+      "url": "system/foundation.html#color",
+      "group": "Docs",
+      "page": "Foundation",
+      "title": "Line",
+      "section": "Line",
+      "text": "--color-line-solid L:#EAEBEC / D:rgba(112,115,124,.22) --color-line-subtle rgba(112,115,124,.16)"
+    },
+    {
+      "id": 170,
+      "url": "system/foundation.html#color",
+      "group": "Docs",
+      "page": "Foundation",
+      "title": "Status",
+      "section": "Status",
+      "text": "--color-status-positive #00BF40 --color-status-negative #FF4242"
+    },
+    {
+      "id": 171,
+      "url": "system/foundation.html#typography",
+      "group": "Docs",
+      "page": "Foundation",
+      "title": "Typography",
+      "section": "Typography",
+      "text": "9단계 타입 스케일 + 2개 폰트 패밀리. Pretendard Variable(본문) · Poppins(디스플레이). Display · 72/110% Display H1 · 36/48 Heading 1 H2 · 36/118% Heading 2 H3 · 24/26 Heading 3 Body L · 20/160% Body Large Body M · 17/150% Body Medium — 기본 본문 Body S · 15/22 Bod"
+    },
+    {
+      "id": 172,
+      "url": "system/foundation.html#spacing",
+      "group": "Docs",
+      "page": "Foundation",
+      "title": "Spacing Scale",
+      "section": "Spacing Scale",
+      "text": "8 배수 그리드. 컴포넌트 내부 · 컴포넌트 간 · 섹션 간 동일 시스템 공유. --space-2 8px --space-3 12px --space-4 16px --space-5 24px --space-6 40px --space-8 60px --section-gap 60px"
+    },
+    {
+      "id": 173,
+      "url": "system/foundation.html#radius",
+      "group": "Docs",
+      "page": "Foundation",
+      "title": "Radius Scale",
+      "section": "Radius Scale",
+      "text": "3단계 모서리 라운드 + pill. 작은 요소는 작은 radius, 큰 컨테이너는 큰 radius. --radius-sm · 8px --radius-md · 12px --radius-lg · 24px pill · 99px"
+    },
+    {
+      "id": 174,
+      "url": "system/foundation.html#effect",
+      "group": "Docs",
+      "page": "Foundation",
+      "title": "Effect — Elevation & Motion",
+      "section": "Effect — Elevation & Motion",
+      "text": "레이어 위계의 그림자 시스템 + 인터랙션 모션 토큰."
+    },
+    {
+      "id": 175,
+      "url": "system/foundation.html#effect",
+      "group": "Docs",
+      "page": "Foundation",
+      "title": "Elevation",
+      "section": "Elevation",
+      "text": "0 · flat 1 · card 2 · dropdown 3 · modal 4 · toast"
+    },
+    {
+      "id": 176,
+      "url": "system/foundation.html#effect",
+      "group": "Docs",
+      "page": "Foundation",
+      "title": "Motion",
+      "section": "Motion",
+      "text": "토큰 값 사용 duration-fast 120ms 마이크로 인터랙션 (hover bg, focus ring) duration-normal 240ms 버튼·카드 hover, 메뉴 등장 duration-slow 400ms+ 패널·모달 등장, 페이지 전환 easing-standard cubic-bezier(0.33, 1, 0.68, 1) 기본 ease-out easing-emphasized cubic-bezier(0.22, 1, 0"
+    },
+    {
+      "id": 177,
+      "url": "system/layout.html",
+      "group": "Docs",
+      "page": "Layout",
+      "title": "Layout",
+      "section": "",
+      "text": "전역 레이아웃 컴포넌트 (GNB · SNB · TOC · Footer) + 페이지 그리드 3 변형. 모든 페이지가 동일한 레이아웃 구조를 공유하여 시각 일관성과 사용자 익숙함을 유지합니다."
+    },
+    {
+      "id": 178,
+      "url": "system/layout.html#gnb",
+      "group": "Docs",
+      "page": "Layout",
+      "title": "GNB · Global Navigation",
+      "section": "GNB · Global Navigation",
+      "text": "72px sticky 헤더. frosted glass bg (rgba 88% + blur 16). 모든 페이지 상단에 동일하게 적용. 위치: 모든 페이지의 <body> 최상단 · position: sticky; top: 0; z-index: 100; <header class=\"gnb gnb--solid\"> <div class=\"gnb__inner\"> <a class=\"gnb__logo\" href=\"../index.html\"> "
+    },
+    {
+      "id": 179,
+      "url": "system/layout.html#snb",
+      "group": "Docs",
+      "page": "Layout",
+      "title": "SNB · Sub Navigation",
+      "section": "SNB · Sub Navigation",
+      "text": "좌측 sticky 사이드바. 그리드 셀 210 + 내부 wrapper(.snb__inner) 가 좌우 +10 확장 + 우측 30 스크롤바 영역. 구조: .snb (210 시각폭) → .snb__inner (margin -10/-10, padding-right 30, overflow-y auto) → items <aside class=\"snb\" aria-label=\"...\"> <div class=\"snb__inner\"> <a c"
+    },
+    {
+      "id": 180,
+      "url": "system/layout.html#snb",
+      "group": "Docs",
+      "page": "Layout",
+      "title": "4-State Interaction",
+      "section": "4-State Interaction",
+      "text": "State Background Color Arrow Default transparent label-alternative hidden Hover fill-hover (4%) label-strong visible Active [aria-current=\"page\"] fill-hover (4%) label-strong visible Active + Hover fill-pressed (8%) label-strong visible"
+    },
+    {
+      "id": 181,
+      "url": "system/layout.html#toc",
+      "group": "Docs",
+      "page": "Layout",
+      "title": "TOC · Anchor",
+      "section": "TOC · Anchor",
+      "text": "우측 sticky 앵커 (160px). scroll-spy 로 현재 viewport 섹션에 active 표시. 클릭 시 smooth scroll. <aside class=\"toc\" aria-label=\"목차\"> <p class=\"toc__title\">목차</p> <ul class=\"toc__list\"> <li><a class=\"toc__item\" href=\"#section-id\">Section Title</a></li> </u"
+    },
+    {
+      "id": 182,
+      "url": "system/layout.html#footer",
+      "group": "Docs",
+      "page": "Layout",
+      "title": "Footer",
+      "section": "Footer",
+      "text": "80px 높이. 좌측 copyright + 우측 version badge. <footer class=\"footer\"> <div class=\"footer__inner\"> <span>© 2026 MIDAS, Inc.</span> <span class=\"footer__badge\">버전 1.0</span> </div> </footer>"
+    },
+    {
+      "id": 183,
+      "url": "system/layout.html#grid",
+      "group": "Docs",
+      "page": "Layout",
+      "title": "Page Grid · 3 Variants",
+      "section": "Page Grid · 3 Variants",
+      "text": "1400 컨테이너 안의 3가지 컬럼 구조."
+    },
+    {
+      "id": 184,
+      "url": "system/layout.html#grid",
+      "group": "Docs",
+      "page": "Layout",
+      "title": ".page-grid--no-toc (Overview 페이지)",
+      "section": ".page-grid--no-toc (Overview 페이지)",
+      "text": "SNB 210 70 Content 1fr 60"
+    },
+    {
+      "id": 185,
+      "url": "system/layout.html#grid",
+      "group": "Docs",
+      "page": "Layout",
+      "title": ".page-grid--with-toc (Detail 페이지)",
+      "section": ".page-grid--with-toc (Detail 페이지)",
+      "text": "SNB 210 70 Content 1fr 100 TOC 160"
+    },
+    {
+      "id": 186,
+      "url": "system/layout.html#grid",
+      "group": "Docs",
+      "page": "Layout",
+      "title": ".page-grid--full (Main / Home)",
+      "section": ".page-grid--full (Main / Home)",
+      "text": "Full 1400 (display: block)"
+    }
+  ]
+}
