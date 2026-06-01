@@ -38,7 +38,26 @@
         <span>Case Study Lab</span>
       </span>
       <nav class="gnb__nav" aria-label="Global">
-        <a class="btn-text" href="../index.html" target="_blank" rel="noopener">산출물 확인하기</a>
+        <div class="pr2-dropdown">
+          <button class="btn-text pr2-dropdown__trigger" type="button" aria-haspopup="true">
+            산출물 확인하기
+            <svg class="pr2-dropdown__chevron" viewBox="0 0 12 8" width="12" height="8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5"/></svg>
+          </button>
+          <div class="pr2-dropdown__menu">
+            <a class="pr2-dropdown__item" href="../index.html" target="_blank" rel="noopener">
+              <span>MIDAS AX System</span>
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h7v7M13 3 3 13"/></svg>
+            </a>
+            <a class="pr2-dropdown__item" href="../system.html" target="_blank" rel="noopener">
+              <span>Design System</span>
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h7v7M13 3 3 13"/></svg>
+            </a>
+            <a class="pr2-dropdown__item" href="https://pood4875-sungjin.github.io/midas-onsite-system/foundation/color.html" target="_blank" rel="noopener">
+              <span>Onsite System <span class="pr2-dropdown__wip">WIP</span></span>
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h7v7M13 3 3 13"/></svg>
+            </a>
+          </div>
+        </div>
         <button class="gnb__theme" type="button" aria-label="다크 모드 전환" aria-pressed="false">
           <svg class="gnb__theme-icon gnb__theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="4"/>
@@ -59,13 +78,17 @@
 
     <!-- ============ Hero ============ -->
     <section class="pr2-hero">
-      <div class="pr2-hero__tag">Case Study</div>
       <h1 class="pr2-hero__title">Claude Code 로<br/>디자인 시스템 사이트 구축하기</h1>
       <p class="pr2-hero__subtitle">시안에서 디자인 시스템을 추출하고, 실제 사이트까지 구현해본 기록.</p>
+      <div class="pr2-hero__cta">
+        <a class="btn-pill btn-pill--primary" href="../index.html" target="_blank" rel="noopener">MIDAS AX System</a>
+        <a class="btn-pill btn-pill--ghost" href="../system.html" target="_blank" rel="noopener">Design System</a>
+        <a class="btn-pill btn-pill--ghost" href="https://pood4875-sungjin.github.io/midas-onsite-system/foundation/color.html" target="_blank" rel="noopener">Onsite System <span class="pr2-hero__cta-wip">WIP</span></a>
+      </div>
       <div class="pr2-hero__meta">
         <div class="pr2-hero__meta-item">
           <span class="pr2-hero__meta-label">Project</span>
-          <span class="pr2-hero__meta-value">TGC Design System</span>
+          <span class="pr2-hero__meta-value">MIDAS AX System 사이트 만들기</span>
         </div>
         <div class="pr2-hero__meta-item">
           <span class="pr2-hero__meta-label">Duration</span>
@@ -79,35 +102,63 @@
     </section>
 
     <!-- ============ 프로젝트 배경 ============ -->
-    <section class="container pr2-section">
-      <div class="pr2-section__num">Background</div>
-      <h2 class="pr2-section__title">프로젝트 배경</h2>
-      <div class="pr2-prose">
-        <p>제품이나 웹사이트를 만들 때 디자인 시스템은 거의 필수다. 색상, 타이포그래피, 간격, 컴포넌트 규칙 등이 정리되어 있어야 디자인과 개발 모두 일관성 있게 작업할 수 있기 때문이다.</p>
-        <p>그래서 일반적으로는 <strong>디자인 시스템을 먼저 만들고 화면을 설계하는 방식</strong>이 이상적인 프로세스로 여겨진다. 하지만 실제 실무는 생각보다 그렇게 흘러가지 않는다.</p>
-        <p>우리는 어떤 컴포넌트가 필요한지, 어떤 패턴이 반복되는지, 어떤 규칙이 필요한지를 결국 화면을 만들면서 발견하는 경우가 많다. 즉,</p>
-        <ul>
-          <li>디자인 시스템이 있어야 화면을 만들기 쉽고</li>
-          <li>화면을 만들어야 어떤 디자인 시스템이 필요한지 알 수 있다</li>
-        </ul>
-        <p>그래서 대부분의 프로젝트에서는 디자인 시스템 구축과 화면 설계가 병렬로 진행된다. 문제는 여기서 발생한다. 초기에 정의한 디자인 시스템을 개발에 전달하더라도 실제 화면이 구체화되면서 컴포넌트와 규칙이 계속 변경된다. 결국 디자인 시스템도 수정되고, 개발도 수정되고, 디자인도 수정되는 일이 반복된다.</p>
-        <p>이 과정은 너무 익숙하지만 늘 비효율적이라는 생각이 들었다. 그래서 이런 질문이 생겼다.</p>
+    <section class="pr2-section">
+      <header class="pr2-section__head">
+        <h2 class="pr2-section__title">프로젝트 배경</h2>
+      </header>
+      <div class="pr2-section__body">
+        <div class="pr2-prose">
+          <p>디자인 시스템과 화면은 서로가 서로를 필요로 한다. <strong>시스템이 있어야 화면을 만들기 쉽고, 화면을 만들어야 어떤 시스템이 필요한지 알 수 있기 때문이다.</strong></p>
+          <p>그래서 대부분의 프로젝트에서는 두 작업이 병렬로 진행된다. 하지만 화면이 구체화될수록 시스템·디자인·개발 모두 반복적으로 수정되는 일이 발생한다. 익숙하지만 늘 비효율적이라고 느꼈다.</p>
+          <p>그래서 이런 질문이 생겼다.</p>
         <div class="pr2-quote">
           <p>굳이 처음부터 디자인 시스템을 정의할 필요가 있을까?</p>
           <p>좋은 시안을 먼저 만들고, AI 가 거기서 디자인 시스템을 추출하면 어떨까?</p>
           <p>시안이 바뀌면 시스템도 같이 업데이트되면 어떨까?</p>
         </div>
-        <p>마침 TGC 디자인 시스템 사이트를 구축하게 되었고, 이번에는 단순히 디자인 시스템 사이트를 만드는 것이 아니라, <strong>실제 시안을 기반으로 Claude Code 가 디자인 시스템을 생성하고, 그 시스템을 발전시키면서 사이트를 구축하는 방식</strong>을 테스트해보기로 했다.</p>
-        <p>결과적으로 이번 프로젝트는 디자인 시스템 사이트 제작 프로젝트이면서 동시에, AI 와 함께 디자인 시스템을 구축하고 운영하는 새로운 작업 방식을 검증하는 케이스 스터디가 되었다.</p>
+      </div>
+
+      <!-- 기존 vs 변화 비교 -->
+      <div class="pr2-compare">
+        <div class="pr2-compare__col pr2-compare__col--old">
+          <div class="pr2-compare__label">기존 방식</div>
+          <h3 class="pr2-compare__title">시스템 → 화면<br/>(끝없는 수정 반복)</h3>
+          <div class="pr2-compare__flow">
+            <div>디자인 시스템 정의</div>
+            <div>화면 설계</div>
+            <div>변경 발생 → 화면 수정</div>
+            <div>시스템도 다시 수정</div>
+          </div>
+          <p class="pr2-compare__caption">↺ 디자인·시스템·개발 모두 반복</p>
+        </div>
+        <div class="pr2-compare__col pr2-compare__col--new">
+          <div class="pr2-compare__label">변화 — 이번 시도</div>
+          <h3 class="pr2-compare__title">시안 → AI 추출<br/>(시스템·사이트 동반 진화)</h3>
+          <div class="pr2-compare__flow">
+            <div>좋은 시안 먼저 제작</div>
+            <div>AI 가 시스템 추출</div>
+            <div>시안 변경 → 시스템 자동 갱신</div>
+            <div>시스템·사이트 함께 진화</div>
+          </div>
+          <p class="pr2-compare__caption">→ 자연스러운 한 방향 흐름</p>
+        </div>
+      </div>
+
+        <div class="pr2-prose">
+          <p>마침 MIDAS AX System 사이트를 구축하게 되었고, 이번에는 단순히 디자인 시스템 사이트를 만드는 것이 아니라, <strong>실제 시안을 기반으로 Claude Code 가 디자인 시스템을 생성하고, 그 시스템을 발전시키면서 사이트를 구축하는 방식</strong>을 테스트해보기로 했다.</p>
+          <p>결과적으로 이번 프로젝트는 디자인 시스템 사이트 제작 프로젝트이면서 동시에, AI 와 함께 디자인 시스템을 구축하고 운영하는 새로운 작업 방식을 검증하는 케이스 스터디가 되었다.</p>
+        </div>
       </div>
     </section>
 
     <!-- ============ 목표 ============ -->
-    <section class="container pr2-section">
-      <div class="pr2-section__num">Goals</div>
-      <h2 class="pr2-section__title">목표</h2>
-      <p class="pr2-prose" style="margin-bottom: 8px;">이번 작업의 목표는 크게 세 가지였다.</p>
-      <div class="pr2-goals">
+    <section class="pr2-section">
+      <header class="pr2-section__head">
+        <h2 class="pr2-section__title">목표</h2>
+      </header>
+      <div class="pr2-section__body">
+        <p class="pr2-prose" style="margin-bottom: 16px;">이번 작업의 목표는 크게 세 가지였다.</p>
+        <div class="pr2-goals">
         <div class="pr2-goal">
           <div class="pr2-goal__num">01</div>
           <h3 class="pr2-goal__title">Claude Code 로 실제 사이트를 구축할 수 있는가</h3>
@@ -123,34 +174,58 @@
           <h3 class="pr2-goal__title">생성된 시스템은 실제로 활용 가능한가</h3>
           <p class="pr2-goal__desc">사이트 구축과 추가 화면 제작 과정에서 재사용성과 확장성을 검증한다.</p>
         </div>
+        </div>
       </div>
     </section>
 
     <!-- ============ 전체 프로세스 ============ -->
-    <section class="container pr2-section">
-      <div class="pr2-section__num">Process</div>
-      <h2 class="pr2-section__title">전체 프로세스</h2>
-      <div class="pr2-flow-v">
-        <div class="pr2-flow-v__item">Figma 시안 제작</div>
-        <div class="pr2-flow-v__item">Claude + Figma MCP 연결</div>
-        <div class="pr2-flow-v__item">디자인 시스템 생성</div>
-        <div class="pr2-flow-v__item">시스템 고도화</div>
-        <div class="pr2-flow-v__item">페이지 구축</div>
-        <div class="pr2-flow-v__item">베리에이션 테스트</div>
+    <section class="pr2-section">
+      <header class="pr2-section__head">
+        <h2 class="pr2-section__title">전체 프로세스</h2>
+      </header>
+      <div class="pr2-section__body">
+        <div class="pr2-flow-h">
+        <div class="pr2-flow-h__row">
+          <div class="pr2-flow-h__item">
+            <span class="pr2-flow-h__num">01</span>
+            <div class="pr2-flow-h__title">Figma 시안 제작</div>
+          </div>
+          <div class="pr2-flow-h__item">
+            <span class="pr2-flow-h__num">02</span>
+            <div class="pr2-flow-h__title">Claude + MCP 연결</div>
+          </div>
+          <div class="pr2-flow-h__item">
+            <span class="pr2-flow-h__num">03</span>
+            <div class="pr2-flow-h__title">디자인 시스템 생성</div>
+          </div>
+          <div class="pr2-flow-h__item">
+            <span class="pr2-flow-h__num">04</span>
+            <div class="pr2-flow-h__title">시스템 고도화</div>
+          </div>
+          <div class="pr2-flow-h__item">
+            <span class="pr2-flow-h__num">05</span>
+            <div class="pr2-flow-h__title">페이지 구축</div>
+          </div>
+          <div class="pr2-flow-h__item">
+            <span class="pr2-flow-h__num">06</span>
+            <div class="pr2-flow-h__title">베리에이션 테스트</div>
+          </div>
+        </div>
+        </div>
       </div>
     </section>
 
     <!-- ============ Steps ============ -->
-    <section class="container pr2-section">
-      <div class="pr2-section__num">Steps</div>
-      <h2 class="pr2-section__title">단계별 작업</h2>
+    <section class="pr2-section">
+      <header class="pr2-section__head">
+        <h2 class="pr2-section__title">단계별 작업</h2>
+      </header>
+      <div class="pr2-section__body">
 
       <!-- Step 01 -->
       <article class="pr2-step">
-        <div class="pr2-step__num">01</div>
         <div class="pr2-step__body">
-          <div class="pr2-step__tag">Step 01</div>
-          <h3 class="pr2-step__title">Figma 와 Claude 연결</h3>
+              <h3 class="pr2-step__title"><span class="pr2-step__num">01</span>Figma 와 Claude 연결</h3>
           <div class="pr2-prose">
             <p>가장 먼저 Claude Code 와 Figma 를 MCP 로 연결했다. MCP 가 연결되면 Claude 는 단순히 화면 이미지를 보는 것이 아니라 실제 디자인 데이터를 읽을 수 있다. 예를 들어</p>
             <ul>
@@ -172,10 +247,8 @@
 
       <!-- Step 02 -->
       <article class="pr2-step">
-        <div class="pr2-step__num">02</div>
         <div class="pr2-step__body">
-          <div class="pr2-step__tag">Step 02</div>
-          <h3 class="pr2-step__title">시안을 기반으로 디자인 시스템 생성</h3>
+              <h3 class="pr2-step__title"><span class="pr2-step__num">02</span>시안을 기반으로 디자인 시스템 생성</h3>
           <div class="pr2-prose">
             <p>일반적인 방식처럼 <strong>토큰 정의 → Foundation → Component → Page</strong> 순서로 진행하지 않았다. 먼저 디자인 시스템 사이트 시안을 만들고 Claude 에게 요청했다.</p>
             <div class="pr2-quote">
@@ -194,10 +267,8 @@
 
       <!-- Step 03 -->
       <article class="pr2-step">
-        <div class="pr2-step__num">03</div>
         <div class="pr2-step__body">
-          <div class="pr2-step__tag">Step 03</div>
-          <h3 class="pr2-step__title">디자인 시스템 고도화</h3>
+              <h3 class="pr2-step__title"><span class="pr2-step__num">03</span>디자인 시스템 고도화</h3>
           <div class="pr2-prose">
             <p>생성된 시스템이 끝은 아니었다. 실제 페이지를 만들기 시작하면 빠진 부분이 보이기 시작한다. 예를 들어</p>
             <ul>
@@ -218,10 +289,8 @@
 
       <!-- Step 04 -->
       <article class="pr2-step">
-        <div class="pr2-step__num">04</div>
         <div class="pr2-step__body">
-          <div class="pr2-step__tag">Step 04</div>
-          <h3 class="pr2-step__title">컴포넌트 고도화</h3>
+              <h3 class="pr2-step__title"><span class="pr2-step__num">04</span>컴포넌트 고도화</h3>
           <div class="pr2-prose">
             <p>이번 작업에서 가장 시간이 많이 들어간 단계다. Foundation 생성은 생각보다 잘 되었지만 컴포넌트는 별도 작업이 필요했다.</p>
             <p>Claude 가 기본 구조를 생성한 뒤, MCP 를 통해 개별 컴포넌트를 다시 연결하며 세부 상태를 보완했다. 예를 들어</p>
@@ -243,10 +312,8 @@
 
       <!-- Step 05 -->
       <article class="pr2-step">
-        <div class="pr2-step__num">05</div>
         <div class="pr2-step__body">
-          <div class="pr2-step__tag">Step 05</div>
-          <h3 class="pr2-step__title">페이지 구축</h3>
+              <h3 class="pr2-step__title"><span class="pr2-step__num">05</span>페이지 구축</h3>
           <div class="pr2-prose">
             <p>정리된 시스템을 기반으로 실제 사이트를 구축했다. 구축한 주요 페이지는 다음과 같다.</p>
             <ul>
@@ -285,19 +352,65 @@
 
       <!-- Step 06 -->
       <article class="pr2-step">
-        <div class="pr2-step__num">06</div>
         <div class="pr2-step__body">
-          <div class="pr2-step__tag">Step 06</div>
-          <h3 class="pr2-step__title">베리에이션 테스트</h3>
+              <h3 class="pr2-step__title"><span class="pr2-step__num">06</span>베리에이션 테스트</h3>
           <div class="pr2-prose">
-            <p>마지막으로 생성된 시스템이 실제로 얼마나 다양한 화면을 만들 수 있는지 테스트했다. 동일한 시스템을 기반으로</p>
-            <ul>
-              <li>Modern Minimal</li>
-              <li>Asymmetric Layout</li>
-              <li>Inverse Accent</li>
-            </ul>
-            <p>등 여러 버전의 시안을 제작했다. 또한 시스템과 무관한 스타일도 별도로 생성해 비교했다.</p>
+            <p>마지막으로 생성된 시스템이 실제로 얼마나 다양한 화면을 만들 수 있는지 테스트했다. 동일한 시스템을 기반으로 시각언어가 다른 시안 3개(System 그룹) 와, 시스템과 무관한 자유 스타일 3개(Free 그룹) 를 비교했다.</p>
           </div>
+
+          <div class="pr2-variants">
+            <div class="pr2-variants__group-label">System — 시스템 토큰 100% 내부</div>
+            <a class="pr2-variant pr2-variant--a" href="../sandbox/a.html" target="_blank" rel="noopener">
+              <div class="pr2-variant__preview" aria-hidden="true"></div>
+              <div class="pr2-variant__body">
+                <span class="pr2-variant__tag">A</span>
+                <h4 class="pr2-variant__name">Modern Minimal</h4>
+                <p class="pr2-variant__desc">중앙정렬 균형, 부드러운 페이드</p>
+              </div>
+            </a>
+            <a class="pr2-variant pr2-variant--b" href="../sandbox/b.html" target="_blank" rel="noopener">
+              <div class="pr2-variant__preview" aria-hidden="true"></div>
+              <div class="pr2-variant__body">
+                <span class="pr2-variant__tag">B</span>
+                <h4 class="pr2-variant__name">Asymmetric</h4>
+                <p class="pr2-variant__desc">좌측정렬 비대칭 레이아웃</p>
+              </div>
+            </a>
+            <a class="pr2-variant pr2-variant--c" href="../sandbox/c.html" target="_blank" rel="noopener">
+              <div class="pr2-variant__preview" aria-hidden="true"></div>
+              <div class="pr2-variant__body">
+                <span class="pr2-variant__tag">C</span>
+                <h4 class="pr2-variant__name">Inverse Accent</h4>
+                <p class="pr2-variant__desc">inverse 토큰 적극 활용</p>
+              </div>
+            </a>
+            <div class="pr2-variants__group-label">Free — 시스템 무관 자유 표현</div>
+            <a class="pr2-variant pr2-variant--d" href="../sandbox/d.html" target="_blank" rel="noopener">
+              <div class="pr2-variant__preview" aria-hidden="true"></div>
+              <div class="pr2-variant__body">
+                <span class="pr2-variant__tag">D</span>
+                <h4 class="pr2-variant__name">AI Wavy Dark</h4>
+                <p class="pr2-variant__desc">블롭 꿀렁임 + 다크</p>
+              </div>
+            </a>
+            <a class="pr2-variant pr2-variant--e" href="../sandbox/e.html" target="_blank" rel="noopener">
+              <div class="pr2-variant__preview" aria-hidden="true"></div>
+              <div class="pr2-variant__body">
+                <span class="pr2-variant__tag">E</span>
+                <h4 class="pr2-variant__name">Scroll Playground</h4>
+                <p class="pr2-variant__desc">스크롤 인터랙션 4종</p>
+              </div>
+            </a>
+            <a class="pr2-variant pr2-variant--f" href="../sandbox/f.html" target="_blank" rel="noopener">
+              <div class="pr2-variant__preview" aria-hidden="true"></div>
+              <div class="pr2-variant__body">
+                <span class="pr2-variant__tag">F</span>
+                <h4 class="pr2-variant__name">Pixel Kitsch</h4>
+                <p class="pr2-variant__desc">Y2K + 픽셀 + 스티커</p>
+              </div>
+            </a>
+          </div>
+
           <div class="pr2-insight">
             <div class="pr2-insight__label">실무 인사이트</div>
             <p><strong>같은 시스템을 사용하면 시각적 결과도 어느 정도 비슷해진다.</strong></p>
@@ -305,93 +418,82 @@
           </div>
         </div>
       </article>
+      </div>
     </section>
 
-    <!-- ============ 가장 중요했던 인사이트 ============ -->
-    <section class="container pr2-section">
-      <div class="pr2-section__num">Key Insight</div>
-      <h2 class="pr2-section__title">가장 중요했던 인사이트</h2>
-      <div class="pr2-key">
-        <div class="pr2-key__label">Key Insight</div>
-        <h3 class="pr2-key__title">한 번에 만들지 말고<br/>쪼개서 만들어라</h3>
-        <div class="pr2-key__body">
-          <p>처음에는 페이지 전체를 한 번에 구현하려고 했다. 하지만 페이지 규모가 커질수록 컴포넌트 해석 오차, 간격 불일치, 스타일 누락, 구조 왜곡 등이 발생했다.</p>
-          <p>반대로 아래 순서로 작업했을 때 결과물 품질이 훨씬 안정적이었다.</p>
-          <div class="pr2-flow-v">
-            <div class="pr2-flow-v__item">Foundation</div>
-            <div class="pr2-flow-v__item">Components</div>
-            <div class="pr2-flow-v__item">GNB</div>
-            <div class="pr2-flow-v__item">SNB</div>
-            <div class="pr2-flow-v__item">Content Section</div>
-            <div class="pr2-flow-v__item">Page Assembly</div>
-            <div class="pr2-flow-v__item">전체 페이지 검증</div>
+    <!-- ============ 인사이트 ============ -->
+    <section class="pr2-section">
+      <header class="pr2-section__head">
+        <h2 class="pr2-section__title">인사이트</h2>
+      </header>
+      <div class="pr2-section__body">
+        <div class="pr2-goals">
+          <div class="pr2-goal">
+            <div class="pr2-goal__num">01</div>
+            <h3 class="pr2-goal__title">시스템은 다듬어가며 완성된다</h3>
+            <p class="pr2-goal__desc">시안으로 한 번에 추출할 수 있지만, 실제 페이지를 만들어가다 보면 빠진 규칙과 새로운 패턴이 계속 발견된다. 사이트를 만들면서 시스템도 함께 다듬어진다.</p>
           </div>
-          <p><strong>Claude 는 큰 문제를 한 번에 해결할 때보다 작은 단위로 나누어 해결할 때 훨씬 정확하다.</strong></p>
-          <p>특히 디자인 구현에서는 토큰 → 컴포넌트 → 레이아웃 → 페이지 순서로 점진적으로 쌓아가는 방식이 원본 시안과의 일치율이 가장 높았다. 이번 프로젝트에서 가장 효과가 좋았던 작업 방식이기도 하다.</p>
+          <div class="pr2-goal">
+            <div class="pr2-goal__num">02</div>
+            <h3 class="pr2-goal__title">화면은 작은 단위부터 쌓아 올린다</h3>
+            <p class="pr2-goal__desc">페이지 전체를 한 번에 만들면 컴포넌트 해석 오차·간격 불일치·구조 왜곡이 발생한다. 토큰 → 컴포넌트 → 레이아웃 → 페이지 순으로 차근차근.</p>
+          </div>
+          <div class="pr2-goal">
+            <div class="pr2-goal__num">03</div>
+            <h3 class="pr2-goal__title">Claude 는 작은 단위에서 더 정확하다</h3>
+            <p class="pr2-goal__desc">큰 문제를 한 번에 해결할 때보다 작은 단위로 나눠 해결할 때 훨씬 정확했다. 작은 단위부터 쌓아가는 방식이 원본 시안과의 일치율이 가장 높았다.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ 좋았던 점 ============ -->
-    <section class="container pr2-section">
-      <div class="pr2-section__num">What Worked</div>
-      <h2 class="pr2-section__title">좋았던 점</h2>
-      <div class="pr2-list">
-        <div class="pr2-list__item">
-          <h3 class="pr2-list__title">시안이 빠르게 구현된다</h3>
-          <p class="pr2-list__desc">디자인 → 개발 전달 과정이 크게 줄어든다.</p>
+    <!-- ============ Impact (정량적 변화) ============ -->
+    <section class="pr2-section">
+      <header class="pr2-section__head">
+        <h2 class="pr2-section__title">결과로 본 변화</h2>
+      </header>
+      <div class="pr2-section__body">
+        <p class="pr2-prose" style="font-size:17px;line-height:1.7;color:var(--color-label-strong);margin-bottom:16px;">디자인 시스템을 <strong>정의하고 셋업하는 시간</strong>만 비교해도 차이는 분명하다. <span style="color:var(--color-label-alternative);">(페이지 구축은 별개)</span></p>
+        <div class="pr2-impact">
+          <div class="pr2-impact__col pr2-impact__col--before">
+            <div class="pr2-impact__label">기존 방식</div>
+            <div class="pr2-impact__time">
+              <strong>4일</strong>
+              <span>(~32시간)</span>
+            </div>
+            <p class="pr2-impact__sub">토큰 정의 → 컴포넌트 규칙 → 문서화</p>
+            <div class="pr2-impact__bar-wrap"><div class="pr2-impact__bar"></div></div>
+            <p class="pr2-impact__desc">색·타이포·간격 토큰을 일일이 정의하고, 컴포넌트 규칙과 사용 문서를 사람이 직접 작성하던 흐름.</p>
+          </div>
+          <div class="pr2-impact__col pr2-impact__col--after">
+            <div class="pr2-impact__label">이번 시도</div>
+            <div class="pr2-impact__time">
+              <strong>4시간</strong>
+              <span>(반나절)</span>
+            </div>
+            <p class="pr2-impact__sub">시안 → Claude 가 토큰·컴포넌트·문서 자동 추출</p>
+            <div class="pr2-impact__bar-wrap"><div class="pr2-impact__bar"></div></div>
+            <p class="pr2-impact__desc">시안만 잘 만들면 시스템 셋업이 자동화된다. 사람은 검수와 디테일 조정에만 집중하면 됨.</p>
+          </div>
         </div>
-        <div class="pr2-list__item">
-          <h3 class="pr2-list__title">수정 속도가 빠르다</h3>
-          <p class="pr2-list__desc">디자인 수정과 코드 수정 사이클이 매우 짧다.</p>
-        </div>
-        <div class="pr2-list__item">
-          <h3 class="pr2-list__title">시스템이 자연스럽게 만들어진다</h3>
-          <p class="pr2-list__desc">페이지를 만들다 보면 필요한 시스템이 보인다.</p>
-        </div>
-        <div class="pr2-list__item">
-          <h3 class="pr2-list__title">결정 과정이 남는다</h3>
-          <p class="pr2-list__desc">Claude 와의 대화, 코드 변경 이력이 모두 기록된다. 나중에 왜 그렇게 결정했는지 다시 확인할 수 있다.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 배운 점 ============ -->
-    <section class="container pr2-section">
-      <div class="pr2-section__num">Lessons</div>
-      <h2 class="pr2-section__title">배운 점</h2>
-      <div class="pr2-list">
-        <div class="pr2-list__item">
-          <h3 class="pr2-list__title">MCP 연결은 필수다</h3>
-          <p class="pr2-list__desc">Claude 가 추측하게 만들지 말고 데이터를 읽게 만들어야 한다.</p>
-        </div>
-        <div class="pr2-list__item">
-          <h3 class="pr2-list__title">시안이 생각보다 중요하다</h3>
-          <p class="pr2-list__desc">좋은 디자인 시스템보다 좋은 시안이 먼저다. 시안 품질이 시스템 품질을 결정한다.</p>
-        </div>
-        <div class="pr2-list__item">
-          <h3 class="pr2-list__title">AI 는 구조화에 강하다</h3>
-          <p class="pr2-list__desc">패턴 발견, 토큰 생성, 시스템 정리는 생각보다 높은 수준으로 수행한다.</p>
-        </div>
-        <div class="pr2-list__item">
-          <h3 class="pr2-list__title">컴포넌트는 결국 사람이 다듬어야 한다</h3>
-          <p class="pr2-list__desc">상태, 인터랙션, 사용성은 여전히 사람의 역할이 중요하다.</p>
-        </div>
-        <div class="pr2-list__item">
-          <h3 class="pr2-list__title">사이트를 만들면서 시스템도 성장한다</h3>
-          <p class="pr2-list__desc">처음부터 완벽한 시스템을 만드는 것보다 실제 사용 과정에서 발전시키는 방식이 현실적이다.</p>
+        <div class="pr2-impact-summary">
+          <div class="pr2-impact-summary__big">8×</div>
+          <p>디자인 시스템 셋업, 8배 빠르게.<br/>약 87% 시간 단축 — 시안 다듬기와 검수 같은 실제 디자인 작업에 시간을 더 쓸 수 있다.</p>
         </div>
       </div>
     </section>
 
     <!-- ============ 정리 ============ -->
-    <section class="container pr2-section">
-      <div class="pr2-section__num">Closing</div>
-      <h2 class="pr2-section__title">정리</h2>
-      <div class="pr2-closing">
-        <p>이번 작업은 디자인 시스템 사이트를 만든 프로젝트이기도 하지만, 실제로는 <strong>Claude Code 를 활용한 새로운 웹 구축 프로세스를 검증한 작업</strong>에 더 가까웠다.</p>
-        <p>특히 인상적이었던 점은 디자인 시스템을 먼저 정의하고 페이지를 만드는 방식보다, <strong>시안을 먼저 만들고 → 시스템을 추출하고 → 시스템을 고도화하면서 → 페이지를 구축하는 흐름</strong>이 실제 업무 방식과 훨씬 자연스럽게 맞아떨어졌다는 것이다.</p>
-        <p>앞으로 Claude Code 를 활용한다면 처음부터 토큰과 컴포넌트를 설계하기보다, <strong>좋은 시안을 먼저 만들고 그 안의 규칙을 시스템으로 발전시키는 접근</strong>이 더 현실적인 방법이 될 수 있다고 느꼈다.</p>
+    <section class="pr2-section">
+      <header class="pr2-section__head">
+        <h2 class="pr2-section__title">정리</h2>
+      </header>
+      <div class="pr2-section__body">
+        <div class="pr2-closing">
+          <p>이번 작업은 디자인 시스템 사이트를 만든 프로젝트이기도 하지만, 실제로는 <strong>Claude Code 를 활용한 새로운 웹 구축 프로세스를 검증한 작업</strong>에 더 가까웠다.</p>
+          <p>특히 인상적이었던 점은 디자인 시스템을 먼저 정의하고 페이지를 만드는 방식보다, <strong>시안을 먼저 만들고 → 시스템을 추출하고 → 시스템을 고도화하면서 → 페이지를 구축하는 흐름</strong>이 실제 업무 방식과 훨씬 자연스럽게 맞아떨어졌다는 것이다.</p>
+          <p>앞으로 Claude Code 를 활용한다면 처음부터 토큰과 컴포넌트를 설계하기보다, <strong>좋은 시안을 먼저 만들고 그 안의 규칙을 시스템으로 발전시키는 접근</strong>이 더 현실적인 방법이 될 수 있다고 느꼈다.</p>
+        </div>
       </div>
     </section>
 
